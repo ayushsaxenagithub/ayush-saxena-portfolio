@@ -10,13 +10,8 @@
   <title>Ayush Saxena - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    /* Add your custom styles here */
-/* Add your custom styles here */
-
-/* Add your custom styles here */
-
-body {
+<style>
+  body {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -43,6 +38,11 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: rotate(360deg);
 }
 
 h1, h2, h3 {
@@ -85,6 +85,8 @@ footer {
   margin-top: 40px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-image {
@@ -136,10 +138,6 @@ footer {
 }
 
 /* Additional Styles */
-.container {
-  position: relative;
-}
-
 .container:before {
   content: "";
   position: absolute;
@@ -150,14 +148,6 @@ footer {
   border: 2px solid #3da37a;
   z-index: -1;
   border-radius: 12px;
-}
-
-.profile-image {
-  transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: rotate(360deg);
 }
 
 h1::first-letter {
@@ -197,26 +187,63 @@ ul::before {
   background-color: #ffb347;
 }
 
-footer {
-  position: relative;
-  overflow: hidden;
-}
-
-footer::before {
-  content: "";
+.menu {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background-color: rgba(61, 163, 122, 0.1);
-  z-index: -1;
-  border-radius: 12px;
+  top: 80px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
 }
 
+.menu.active {
+  display: block;
+}
 
+.menu-item {
+  margin-bottom: 10px;
+}
 
-    </style>
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: #3da37a;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .menu-item {
+    margin-bottom: 5px;
+  }
+
+  .menu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -337,9 +364,7 @@ footer::before {
   </a>
 </div>
 <script>
-    // JavaScript code for responsiveness and interactivity
-
-// Toggle navigation menu
+  // Toggle navigation menu
 function toggleMenu() {
   const menu = document.querySelector('.menu');
   menu.classList.toggle('active');
@@ -378,6 +403,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add event listener to the menu toggle button
   const menuToggle = document.querySelector('.menu-toggle');
   menuToggle.addEventListener('click', toggleMenu);
+  
+  // Add event listener to scroll to top button
+  const scrollTopButton = document.querySelector('.scroll-top-button');
+  scrollTopButton.addEventListener('click', () => {
+    smoothScroll('body');
+  });
+  
+  // Add event listener to expand and collapse content
+  const expandButtons = document.querySelectorAll('.expand-button');
+  expandButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const content = e.target.nextElementSibling;
+      content.classList.toggle('expanded');
+    });
+  });
 });
 
 </script>
