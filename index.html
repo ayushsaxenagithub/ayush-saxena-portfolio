@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
   <!-- analytics -->
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQPYEB4R1Z"></script>
@@ -35,247 +32,29 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <title>Ayush Saxena - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
 
-<style>
-  body {
-  font-family: 'Roboto', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.profile-image {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: rotate(360deg);
-}
-
-h1, h2, h3 {
-  color: #3da37a;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-a {
-  color: #3da37a;
-  text-decoration: none;
-}
-
-p {
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-footer {
-  background-color: #3da37a;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer-image {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.social-media-icons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.social-media-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #3da37a;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-media-icons a:hover {
-  color: #2c7a58;
-}
-
-/* Additional Colors */
-.primary-color {
-  color: #3da37a;
-}
-
-.secondary-color {
-  color: #ff6f69;
-}
-
-.tertiary-color {
-  color: #ffb347;
-}
-
-.quaternary-color {
-  color: #50b2c0;
-}
-
-.quinary-color {
-  color: #8e9aaf;
-}
-
-/* Additional Styles */
-.container:before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid #3da37a;
-  z-index: -1;
-  border-radius: 12px;
-}
-
-h1::first-letter {
-  font-size: 48px;
-  font-weight: bold;
-  color: #ff6f69;
-}
-
-h2 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 2px;
-  background-color: #3da37a;
-}
-
-ul {
-  position: relative;
-}
-
-ul::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -15px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #ffb347;
-}
-
-.menu {
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  display: none;
-}
-
-.menu.active {
-  display: block;
-}
-
-.menu-item {
-  margin-bottom: 10px;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 24px;
-    color: #3da37a;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-
-  .menu-item {
-    margin-bottom: 5px;
-  }
-
-  .menu {
-    position: static;
-    display: block;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    margin-top: 10px;
-  }
-}
-
-</style>
 </head>
 
 <body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#connect">Connect</a>
+    <a href="Resume_.pdf" target="_blank">Resume</a>
+    
+  </nav>
+  
+  
+
+
   <a href="#">
     <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=3da37a&height=120&section=header" alt="Header Image">
   </a>
+
   <a href="#">
     <img class="profile-image" src="img/profile.jpg" alt="Header Image">
   </a>
@@ -287,7 +66,7 @@ ul::before {
 
   <p>Welcome to my world of creativity and innovation! 🚀 I'm Ayush Saxena, a tech enthusiast with a passion for crafting exceptional software solutions. Let's embark on a journey through my experiences and projects that showcase my love for coding and problem-solving.</p>
 
-  <h2>Skills</h2>
+  <h2 id="skills">Skills</h2>
 
   <ul>
     <li>Programming: Python, C++, JavaScript</li>
@@ -300,11 +79,11 @@ ul::before {
     <li>UI/UX Design: Adobe XD</li>
   </ul>
 
-  <h2>About Me</h2>
+  <h2 id="about">About Me</h2>
 
   <p>I am Ayush Saxena, currently pursuing my M.TECH Dual Degree at the prestigious IIT Kharagpur. Hailing from the vibrant city of Moradabad, U.P, India, I am on a mission to bridge the gap between technology and businesses through my expertise.</p>
 
-  <h2>Experience</h2>
+  <h2 id="experience">Experience</h2>
 
   <h3>TransOrg - Analytics | Software Developer</h3>
 
@@ -322,16 +101,6 @@ ul::before {
 
   <p>Driven by my passion for empowering freelancers, I embarked on the development of a cutting-edge Freelancers Marketplace application. Harnessing the power of Python, Django, HTML, CSS, and Bootstrap, I created a dynamic platform where freelancers could showcase their skills and projects. The innovative search engine allowed users to discover talents and projects effortlessly, fostering a vibrant community of collaboration.</p>
 
-  <h2>Competition</h2>
-
-  <h3>Open Soft - Inter Hall Competition</h3>
-
-  <p>As part of the Inter Hall Competition, I unleashed my creative prowess and developed an awe-inspiring e-commerce website application. Combining the powers of Flask, Python, HTML, CSS, JavaScript, SQLite, and Bootstrap, I crafted a visually stunning platform. The seamless integration of front-end and back-end, along with real-time data management, ensured an immersive and delightful shopping experience for users.</p>
-
-  <h2>Let's Connect</h2>
-
-  <p>Thank you for taking the time to explore my profile! Let's connect and embark on a journey of innovation and collaboration. Reach out to me on <a href="https://www.linkedin.com/in/ayush-saxena-8b8213195/">LinkedIn</a> | <a href="mailto:ayush.asax.saxena@gmail.com">Gmail</a> and let's create something extraordinary together! 🌟</p>
-
   <div align="center">
     <br>
     <a href="#">
@@ -341,6 +110,20 @@ ul::before {
       <img height="190rem" alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayushsaxenagithub&langs_count=5&layout=compact&theme=vue-dark&bg_color=0d1117&border_radius=15&border_color=0d1117" />
     </a>
   </div>
+
+
+
+  <h2>Competition</h2>
+
+  <h3>Open Soft - Inter Hall Competition</h3>
+
+  <p>As part of the Inter Hall Competition, I unleashed my creative prowess and developed an awe-inspiring e-commerce website application. Combining the powers of Flask, Python, HTML, CSS, JavaScript, SQLite, and Bootstrap, I crafted a visually stunning platform. The seamless integration of front-end and back-end, along with real-time data management, ensured an immersive and delightful shopping experience for users.</p>
+
+  <h2 id="connect">Let's Connect</h2>
+
+  <p>Thank you for taking the time to explore my profile! Let's connect and embark on a journey of innovation and collaboration. Reach out to me on <a href="https://www.linkedin.com/in/ayush-saxena-8b8213195/">LinkedIn</a> | <a href="mailto:ayush.asax.saxena@gmail.com">Gmail</a> and let's create something extraordinary together! 🌟</p>
+
+
 
   <br>
   <br>
@@ -389,67 +172,12 @@ ul::before {
     <img class="footer-image" src="https://capsule-render.vercel.app/api?type=waving&color=3da37a&height=120&section=footer" alt="Footer Image">
   </a>
 </div>
-<script>
-  // Toggle navigation menu
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
-}
-
-// Smooth scrolling
-function smoothScroll(target) {
-  const element = document.querySelector(target);
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth',
-  });
-}
-
-// Scroll to section on menu item click
-const menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute('href');
-    smoothScroll(target);
-  });
-});
-
-// Image rotation on hover
-const profileImage = document.querySelector('.profile-image');
-profileImage.addEventListener('mouseover', () => {
-  profileImage.style.transform = 'rotate(360deg)';
-});
-profileImage.addEventListener('mouseout', () => {
-  profileImage.style.transform = 'rotate(0deg)';
-});
-
-// Run initialization code when the document is ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Add event listener to the menu toggle button
-  const menuToggle = document.querySelector('.menu-toggle');
-  menuToggle.addEventListener('click', toggleMenu);
-  
-  // Add event listener to scroll to top button
-  const scrollTopButton = document.querySelector('.scroll-top-button');
-  scrollTopButton.addEventListener('click', () => {
-    smoothScroll('body');
-  });
-  
-  // Add event listener to expand and collapse content
-  const expandButtons = document.querySelectorAll('.expand-button');
-  expandButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const content = e.target.nextElementSibling;
-      content.classList.toggle('expanded');
-    });
-  });
-});
-
-</script>
 
 
+<script src="script.js"></script>
 
   </body>
+</html>
+
 
 </html>
