@@ -244,3 +244,102 @@ body {
     background-image: url('dark-mode-icon.png');
   }
   
+
+/* Add animation to the profile image */
+.profile-image {
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: rotate(360deg);
+}
+
+/* Add animation to the social media icons */
+.social-media-icons a {
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Additional CSS for animation */
+
+    /* Animate the profile image on hover */
+    .profile-image:hover {
+      animation: rotate 1s infinite linear;
+    }
+
+    /* Keyframes for rotation animation */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Fade-in effect for the skills section */
+    #skills ul li {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    #skills ul li.fade-in {
+      opacity: 1;
+    }
+
+    /* Slide-in effect for the experience section */
+    #experience h3,
+    #experience p {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 1s ease-in, transform 1s ease-in;
+    }
+
+    #experience h3.fade-in,
+    #experience p.fade-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Mobile-specific styles and animations */
+    @media (max-width: 768px) {
+      /* Adjust the animation duration for mobile */
+      .profile-image:hover {
+        animation: rotate 0.5s infinite linear;
+      }
+
+      /* Adjust the fade-in effect for mobile */
+      #skills ul li,
+      #experience h3,
+      #experience p {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* Animate the background color of the navigation menu */
+      .menu {
+        background-color: #fff;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      .menu:hover {
+        background-color: #ffcc00;
+      }
+
+      /* Animate the slide-in effect for the about section */
+      #about {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-in, transform 1s ease-in;
+      }
+
+      #about.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }

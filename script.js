@@ -13,15 +13,9 @@ function smoothScroll(target) {
     });
 }
 
+
 // Scroll to section on menu item click
-const menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = e.target.getAttribute('href');
-        smoothScroll(target);
-    });
-});
+
 
 // Image rotation on hover
 const profileImage = document.querySelector('.profile-image');
