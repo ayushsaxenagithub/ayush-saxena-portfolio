@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /script.js
+Disallow: /styles.css
+Disallow: /img/
+Disallow: /Resume_.pdf
+Disallow: /api/
+Disallow: /api/*
