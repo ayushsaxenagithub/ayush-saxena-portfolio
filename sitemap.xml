@@ -12,4 +12,34 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ayushsaxena.in/#skills</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ayushsaxena.in/#experience</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ayushsaxena.in/#connect</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ayushsaxena.in/Resume_.pdf</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.ayushsaxena.in/</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

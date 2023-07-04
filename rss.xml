@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Ayush Saxena's Website</title>
+    <link>https://ayushsaxena.in</link>
+    <description>Personal website of Ayush Saxena</description>
+    <language>en-us</language>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://blog.ayushsaxena.in/rss.xml</link>
+      <description>RSS feed for Ayush Saxena's blog</description>
+      <pubDate>Wed, 03 Jul 2023 12:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
