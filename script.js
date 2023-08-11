@@ -116,3 +116,45 @@ function toggleMenu() {
     }
   });
   
+
+// Add an event listener for navigation links
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      
+      // Remove active class from all links
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      // Add active class to the clicked link
+      link.classList.add('active');
+      
+      // Get the target section's ID from the link's href attribute
+      const targetId = link.getAttribute('href');
+      
+      // Scroll to the target section smoothly
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Find all images with data-src attribute
+  const lazyImages = document.querySelectorAll('img[data-src]');
+
+  lazyImages.forEach(img => {
+    // Load the actual image when the page is fully loaded
+    img.onload = () => {
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    };
+
+    // Set the src to a transparent placeholder image
+    img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"%3E%3C/svg%3E';
+  });
+});

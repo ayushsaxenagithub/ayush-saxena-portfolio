@@ -334,16 +334,28 @@ body {
       .menu:hover {
         background-color: #ffcc00;
       }
-
-      /* Animate the slide-in effect for the about section
-      #about {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 1s ease-in, transform 1s ease-in;
-      }
-
-      #about.fade-in {
-        opacity: 1;
-        transform: translateY(0);
-      } */
     }
+
+
+/* Existing CSS rules... */
+
+/* Add smooth scrolling behavior for navigation links */
+nav a {
+  /* ... Existing styles ... */
+  cursor: pointer; /* Add cursor style */
+}
+
+/* Add styles for active navigation link */
+nav a.active {
+  color: #ffcc00;
+}
+
+/* Smooth scrolling transition */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add space above the section when it's focused */
+section {
+  margin-top: 100px; /* Adjust this value according to your preference */
+}
