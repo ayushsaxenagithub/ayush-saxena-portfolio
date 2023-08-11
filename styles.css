@@ -313,6 +313,10 @@ body {
         animation: rotate 0.5s infinite linear;
       }
 
+      body{
+        margin-left: 15px;
+      }
+
       /* Adjust the fade-in effect for mobile */
       #skills ul li,
       #experience h3,
@@ -331,7 +335,7 @@ body {
         background-color: #ffcc00;
       }
 
-      /* Animate the slide-in effect for the about section */
+      /* Animate the slide-in effect for the about section
       #about {
         opacity: 0;
         transform: translateY(50px);
@@ -341,5 +345,5 @@ body {
       #about.fade-in {
         opacity: 1;
         transform: translateY(0);
-      }
+      } */
     }
