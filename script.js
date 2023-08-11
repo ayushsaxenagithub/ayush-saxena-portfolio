@@ -14,7 +14,6 @@ function smoothScroll(target) {
 }
 
 
-// Scroll to section on menu item click
 
 
 // Image rotation on hover
