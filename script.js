@@ -1,160 +1,116 @@
-// Toggle navigation menu
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
+  // Set dark mode by default
+  document.body.classList.add("dark-mode");
+  document.body.classList.remove("light-mode");
+  document.getElementById('toggle-icon').classList.remove('fa-moon-o');
+  document.getElementById('toggle-icon').classList.add('fa-sun-o');
 
-// Smooth scrolling
-function smoothScroll(target) {
-    const element = document.querySelector(target);
-    window.scrollTo({
-        top: element.offsetTop,
-        behavior: 'smooth',
-    });
-}
+  // Display the welcome notice
+  const welcomeNotice = document.getElementById("welcome-notice");
 
+  // Hide the welcome notice after 3 seconds
+  setTimeout(() => {
+      welcomeNotice.style.opacity = "0";
+      setTimeout(() => {
+          welcomeNotice.style.display = "none";
+          showHeader();
+      }, 500);
+  }, 3000);
 
-
-
-// Image rotation on hover
-const profileImage = document.querySelector('.profile-image');
-profileImage.addEventListener('mouseover', () => {
-    profileImage.style.transform = 'rotate(360deg)';
-});
-profileImage.addEventListener('mouseout', () => {
-    profileImage.style.transform = 'rotate(0deg)';
-});
-
-// Run initialization code when the document is ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Add event listener to the menu toggle button
-    const menuToggle = document.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', toggleMenu);
-
-    // Add event listener to scroll to top button
-    const scrollTopButton = document.querySelector('.scroll-top-button');
-    scrollTopButton.addEventListener('click', () => {
-        smoothScroll('body');
-    });
-
-    // Add event listener to expand and collapse content
-    const expandButtons = document.querySelectorAll('.expand-button');
-    expandButtons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            const content = e.target.nextElementSibling;
-            content.classList.toggle('expanded');
-        });
-    });
-});
-
-
-// Toggle navigation menu
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
+  function showHeader() {
+      document.querySelector(".header").style.opacity = "1";
+      document.querySelector(".header").style.transform = "translateY(0)";
   }
-  
-  // Smooth scrolling
-  function smoothScroll(target) {
-    const element = document.querySelector(target);
-    window.scrollTo({
-      top: element.offsetTop,
-      behavior: 'smooth',
-    });
+
+  const sections = document.querySelectorAll(".section");
+  let currentSection = 0;
+
+  function showSection(index) {
+      sections.forEach((section, i) => {
+          if (i === index) {
+              section.style.display = "block";
+              setTimeout(() => {
+                  section.style.opacity = "1";
+                  section.style.transform = "translateY(0)";
+              }, 50);
+          } else {
+              section.style.opacity = "0";
+              section.style.transform = "translateY(20px)";
+              setTimeout(() => {
+                  section.style.display = "none";
+              }, 500);
+          }
+      });
   }
-  
-  // Scroll to section on menu item click
-  const menuItems = document.querySelectorAll('.menu-item');
-  menuItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
+
+  document.addEventListener("scroll", function () {
+      const triggerHeight = window.innerHeight / 3;
+
+      sections.forEach((section, index) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          if (sectionTop <= triggerHeight && sectionTop >= 0) {
+              showSection(index);
+          }
+      });
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          currentSection = (currentSection + 1) % sections.length;
+          showSection(currentSection);
+      } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          currentSection = (currentSection - 1 + sections.length) % sections.length;
+          showSection(currentSection);
+      }
+  });
+
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const sectionId = link.getAttribute('data-section');
+          const sectionIndex = Array.from(sections).findIndex(section => section.id === sectionId);
+          showSection(sectionIndex);
+          // Collapse the navbar in mobile view
+          if (window.innerWidth < 992) {
+              $('.navbar-collapse').collapse('hide');
+          }
+      });
+  });
+
+  document.querySelector('.navbar-brand').addEventListener('click', (e) => {
       e.preventDefault();
-      const target = e.target.getAttribute('href');
-      smoothScroll(target);
-  
-      // Close the menu after clicking a menu item (for responsive navigation)
-      const menu = document.querySelector('.menu');
-      menu.classList.remove('active');
-    });
+      showSection(0); // Show the "About" section
+      // Collapse the navbar in mobile view
+      if (window.innerWidth < 992) {
+          $('.navbar-collapse').collapse('hide');
+      }
   });
-  
-  // Image rotation on hover
-  const profileImage = document.querySelector('.profile-image');
-  profileImage.addEventListener('mouseover', () => {
-    profileImage.style.transform = 'rotate(360deg)';
-  });
-  profileImage.addEventListener('mouseout', () => {
-    profileImage.style.transform = 'rotate(0deg)';
-  });
-  
-  // Run initialization code when the document is ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // Add event listener to the menu toggle button
-    const menuToggle = document.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', toggleMenu);
-  
-    // Add event listener to scroll to top button
-    const scrollTopButton = document.querySelector('.scroll-top-button');
-    scrollTopButton.addEventListener('click', () => {
-      smoothScroll('body');
-    });
-  
-    // Add event listener to expand and collapse content
-    const expandButtons = document.querySelectorAll('.expand-button');
-    expandButtons.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const content = e.target.nextElementSibling;
-        content.classList.toggle('expanded');
-      });
-    });
-  });
-  
-  // Check if the viewport width changes and close the menu (for responsive navigation)
-  window.addEventListener('resize', () => {
-    const menu = document.querySelector('.menu');
-    if (menu.classList.contains('active')) {
-      menu.classList.remove('active');
-    }
-  });
-  
 
-// Add an event listener for navigation links
-document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('nav a');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-      
-      // Remove active class from all links
-      navLinks.forEach(link => link.classList.remove('active'));
-      
-      // Add active class to the clicked link
-      link.classList.add('active');
-      
-      // Get the target section's ID from the link's href attribute
-      const targetId = link.getAttribute('href');
-      
-      // Scroll to the target section smoothly
-      document.querySelector(targetId).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-});
+  // Initial section display
+  showSection(currentSection);
 
+  // Dark mode toggle function
+  window.toggleMode = function() {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+      const toggleIcon = document.getElementById('toggle-icon');
+      if (document.body.classList.contains("dark-mode")) {
+          toggleIcon.classList.remove('fa-moon-o');
+          toggleIcon.classList.add('fa-sun-o');
+      } else {
+          toggleIcon.classList.remove('fa-sun-o');
+          toggleIcon.classList.add('fa-moon-o');
+      }
+      showSection(0); // Ensure it navigates to the "About" section
+  };
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Find all images with data-src attribute
-  const lazyImages = document.querySelectorAll('img[data-src]');
-
-  lazyImages.forEach(img => {
-    // Load the actual image when the page is fully loaded
-    img.onload = () => {
-      img.src = img.getAttribute('data-src');
-      img.removeAttribute('data-src');
-    };
-
-    // Set the src to a transparent placeholder image
-    img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"%3E%3C/svg%3E';
+  // Scroll functionality for mouse wheel
+  document.addEventListener("wheel", function (e) {
+      if (e.deltaY > 0) {
+          currentSection = (currentSection + 1) % sections.length;
+      } else {
+          currentSection = (currentSection - 1 + sections.length) % sections.length;
+      }
+      showSection(currentSection);
   });
 });
