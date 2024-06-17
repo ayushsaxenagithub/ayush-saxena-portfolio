@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
           welcomeNotice.style.display = "none";
           showHeader();
       }, 500);
-  }, 1000);
+  }, 3000);
 
   function showHeader() {
       document.querySelector(".header").style.opacity = "1";
@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
           if (i === index) {
               section.style.display = "block";
               setTimeout(() => {
-                  section.style.opacity = "1";
-                  section.style.transform = "translateY(0)";
+                  section.classList.add('visible');
               }, 50);
           } else {
-              section.style.opacity = "0";
-              section.style.transform = "translateY(20px)";
+              section.classList.remove('visible');
               setTimeout(() => {
                   section.style.display = "none";
               }, 500);
@@ -129,5 +127,26 @@ document.addEventListener("DOMContentLoaded", function () {
       // Initially hide card bodies
       const cardBody = card.querySelector('.card-body');
       cardBody.style.display = 'none';
+  });
+
+  // Add up and down navigation buttons
+  const upButton = document.createElement('div');
+  upButton.classList.add('nav-btn', 'up');
+  upButton.innerHTML = '<i class="fa fa-arrow-up"></i>';
+  document.body.appendChild(upButton);
+
+  const downButton = document.createElement('div');
+  downButton.classList.add('nav-btn', 'down');
+  downButton.innerHTML = '<i class="fa fa-arrow-down"></i>';
+  document.body.appendChild(downButton);
+
+  upButton.addEventListener('click', () => {
+      currentSection = (currentSection - 1 + sections.length) % sections.length;
+      showSection(currentSection);
+  });
+
+  downButton.addEventListener('click', () => {
+      currentSection = (currentSection + 1) % sections.length;
+      showSection(currentSection);
   });
 });
