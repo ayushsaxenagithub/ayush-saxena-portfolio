@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
           welcomeNotice.style.display = "none";
           showHeader();
       }, 500);
-  }, 3000);
+  }, 1000);
 
   function showHeader() {
       document.querySelector(".header").style.opacity = "1";
