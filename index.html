@@ -1,139 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Saxena Portfolio">
-    <meta name="keywords" content="Full Stack Developer, Ayush Saxena Blog, Python, JavaScript, TypeScript, React, Nodejs, HTML5, CSS3, Bootstrap, C#, C++, C, Java, PHP, PostgreSQL, MySQL, MongoDB, Django">
-    <title>Ayush Saxena - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body class="light-mode">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#" data-section="about">Ayush Saxena Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#" data-section="experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="contact">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank" href="Ayush_Saxena_Resume.pdf" data-section="contact">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank" href="https://blog.ayushsaxena.in/" data-section="contact">Blogs</a></li>
-                <li class="nav-item">
-                    <button class="toggle-btn btn btn-link nav-link" onclick="toggleMode()">
-                        <i class="fa fa-moon-o" id="toggle-icon"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id="welcome-notice"><h1>Welcome to Ayush Saxena's Portfolio</h1></div>
-    <div class="container">
-        <div id="about" class="section header">
-            <img src="img/profile.jpg" alt="Ayush Saxena" class="profile-pic">
-            <h1>Ayush Saxena</h1>
-            <p>IIT Kharagpur Graduate | Data Scientist at Turing</p>
-            <p>Software Developer and Innovator</p>
-        </div>
-        <div id="summary" class="section professional-summary">
-            <h2>Professional Summary</h2>
-            <p>I am a graduate of IIT Kharagpur, currently working as a Data Scientist at Turing. With 16 months of internship experience at TransOrg Analytics and Web Prism IT Solution, I have honed my skills in building applications using data analytics, machine learning, and full-stack development, delivering high-performance solutions.</p>
-        </div>
-        <div id="education" class="section education-summary">
-            <h2>Education</h2>
-            <p>I earned a Dual Degree (B.Tech + M.Tech) in Ocean Engineering and Naval Architecture from the Indian Institute of Technology Kharagpur.</p>
-            <p>Completed 12th from VKS School Moradabad, CBSE School.</p>
-            <p>Completed 10th from Wilsonia College Moradabad, ICSE School.</p>
-        </div>
-        <div id="experience" class="section experience-summary wide-section">
-            <h2>Work Experience</h2>
-            <div class="card">
-                <div class="card-header">
-                    Data Scientist @ Turing
-                    <div class="date"><i class="fa fa-calendar"></i> June 2024 - Present</div>
-                </div>
-                <div class="card-body">
-                    <p>Currently working as a Data Scientist at Turing, contributing to data-driven solutions and machine learning models to solve complex business problems.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Software Developer Intern @ TransOrg Analytics
-                    <div class="date"><i class="fa fa-calendar"></i> June 2022 - July 2023</div>
-                </div>
-                <div class="card-body">
-                    <p>During my internship at TransOrg Analytics, I engineered and maintained the TransOrg Analytics and PicklAI systems using Python and proprietary in-house libraries to ensure peak performance...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Software Developer Intern @ Web Prism IT Solution
-                    <div class="date"><i class="fa fa-calendar"></i> May 2021 - July 2021</div>
-                </div>
-                <div class="card-body">
-                    <p>At Web Prism IT Solution, I led the integration of ReactJS, Python, Django, and REST APIs for seamless full-stack projects within a collaborative team...</p>
-                </div>
-            </div>
-        </div>
-        <div id="projects" class="section projects-summary wide-section">
-            <h2>Projects</h2>
-            <div class="card">
-                <div class="card-header">
-                    Machine Learning-Driven Turbulence Analysis | MTech Project
-                    <div class="date"><i class="fa fa-calendar"></i> July 2023 - December 2023</div>
-                </div>
-                <div class="card-body">
-                    <p>For my MTech project at IIT Kharagpur, I developed an advanced neural network model to predict the pressure strain in turbulent flows...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Learning Management System | IIT Kharagpur
-                    <div class="date"><i class="fa fa-calendar"></i> January 2023 - April 2023</div>
-                </div>
-                <div class="card-body">
-                    <p>Under the guidance of Prof. Kaushal Kumar Bhagat at IIT Kharagpur, I developed a robust Python-backed web-based Learning Management System (LMS)...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Freelancers Marketplace | Self Project
-                    <div class="date"><i class="fa fa-calendar"></i> December 2021</div>
-                </div>
-                <div class="card-body">
-                    <p>I created a freelancer marketplace using Django (REST) and Python. The platform enhances user experience through advanced search capabilities...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Ecommerce Website | Self Project
-                    <div class="date"><i class="fa fa-calendar"></i> April 2022</div>
-                </div>
-                <div class="card-body">
-                    <p>In my self-initiated project, I created a captivating web-based e-commerce application using Python, Django Rest API, ReactJS, HTML, CSS, and JavaScript...</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add other sections similarly -->
-        <div id="contact" class="section contact-summary">
-            <h2>Contact Us</h2>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/ayush-saxena-8b8213195" target="_blank" class="fa fa-linkedin fa-2x"></a>
-                <a href="https://www.facebook.com/ayush.saxena.3760" target="_blank" class="fa fa-facebook fa-2x"></a>
-                <a href="https://www.instagram.com/ayushsaxena844" target="_blank" class="fa fa-instagram fa-2x"></a>
-                <a href="https://github.com/ayushsaxenagithub" target="_blank" class="fa fa-github fa-2x"></a>
-                <a href="https://codeforces.com/profile/ayushsaxenacodeforces" target="_blank" class="fa fa-code fa-2x"></a>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-</body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coming soon
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h1>Coming Soon</h1>
+    
+    <script src="" async defer></script>
+  </body>
 </html>
