@@ -113,4 +113,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       showSection(currentSection);
   });
+
+  // Ensure cards are clickable and expandable
+  document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+          const cardBody = card.querySelector('.card-body');
+          card.classList.toggle('expanded');
+          if (card.classList.contains('expanded')) {
+              cardBody.style.display = 'block';
+          } else {
+              cardBody.style.display = 'none';
+          }
+      });
+
+      // Initially hide card bodies
+      const cardBody = card.querySelector('.card-body');
+      cardBody.style.display = 'none';
+  });
 });
