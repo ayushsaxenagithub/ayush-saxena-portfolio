@@ -1,139 +1,380 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Saxena Portfolio">
-    <meta name="keywords" content="Full Stack Developer, Ayush Saxena Blog, Python, JavaScript, TypeScript, React, Nodejs, HTML5, CSS3, Bootstrap, C#, C++, C, Java, PHP, PostgreSQL, MySQL, MongoDB, Django">
-    <title>Ayush Saxena - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Saxena | Portfolio</title>
+  <meta name="description" content="Ayush Saxena Portfolio">
+  <meta name="keywords" content="Ayush Saxena, Software Developer, LLM Trainer">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#" data-section="about">Ayush Saxena Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#" data-section="experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-section="contact">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank" href="Ayush_Saxena_Resume.pdf" data-section="contact">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank" href="https://blog.ayushsaxena.in/" data-section="contact">Blogs</a></li>
-                <li class="nav-item">
-                    <button class="toggle-btn btn btn-link nav-link" onclick="toggleMode()">
-                        <i class="fa fa-moon-o" id="toggle-icon"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id="welcome-notice"><h1>Welcome to Ayush Saxena's Portfolio</h1></div>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand" href="#welcome">Ayush Saxena</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#welcome">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-light text-primary ml-2" style="color: #bc3737;" href="Ayush_Saxena_Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+<!-- Updated Welcome Section -->
+<section id="welcome" class="hero-section">
     <div class="container">
-        <div id="about" class="section header">
-            <img src="img/profile.jpg" alt="Ayush Saxena" class="profile-pic">
-            <h1>Ayush Saxena</h1>
-            <p>IIT Kharagpur Graduate | Data Scientist at Turing</p>
-            <p>Software Developer | Innovator</p>
+      <div class="row align-items-center">
+        
+        <!-- Image on the left -->
+        <div class="col-md-6 text-center mb-4 mb-md-0" data-aos="fade-right">
+          <img src="img/profile.jpg"
+               alt="Ayush Saxena"
+               class="hero-image rounded-circle">
         </div>
-        <div id="summary" class="section professional-summary">
-            <h2>Professional Summary</h2>
-            <p>I am a graduate of IIT Kharagpur, currently working as a Data Scientist at Turing. With 16 months of internship experience at TransOrg Analytics and Web Prism IT Solution, I have honed my skills in building applications using data analytics, machine learning, and full-stack development, delivering high-performance solutions.</p>
+  
+        <!-- Text on the right -->
+        <div class="col-md-6 hero-content text-md-left text-center" data-aos="fade-left">
+          <h4 class="greeting">Hi, I'm</h4>
+          <h1 class="name">Ayush Saxena</h1>
+          <h2 class="designation">Software Developer</h2>
+          <a href="#contact" class="cta-button">Contact Me</a>
         </div>
-        <div id="education" class="section education-summary">
-            <h2>Education</h2>
-            <p>I earned a Dual Degree (B.Tech + M.Tech) in Ocean Engineering and Naval Architecture from the Indian Institute of Technology Kharagpur.</p>
-            <p>Completed 12th from VKS School Moradabad, CBSE School.</p>
-            <p>Completed 10th from Wilsonia College Moradabad, ICSE School.</p>
-        </div>
-        <div id="experience" class="section experience-summary wide-section">
-            <h2>Work Experience</h2>
-            <div class="card">
-                <div class="card-header">
-                    Data Scientist @ Turing
-                    <div class="date"><i class="fa fa-calendar"></i> June 2024 - Present</div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+<!-- About Section -->
+<section id="about" class="about-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up">
+                <h2 class="section-heading text-center mb-5">Full-Stack Engineer & Systems Architect</h2>
+
+                <div class="cyber-card mb-5" data-aos="fade-right">
+                    <div class="holographic-overlay"></div>
+                    <div class="content">
+                        <h4 class="glitch-text">Code Alchemist</h4>
+                        <p class="neon-text" style="color: #fff;">
+                            I’m a software engineer and systems architect with a dual degree from IIT Kharagpur (Class of ’24), currently driving backend and cloud infrastructure at Turing. 
+                            I specialize in crafting RESTful APIs, microservices, and CI/CD pipelines—leveraging Python, Django/Flask, React, AWS/GCP, Docker and Kubernetes—to deliver high‑performance, scalable solutions.                   
+                        </p>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>Currently working as a Data Scientist at Turing, contributing to data-driven solutions and machine learning models to solve complex business problems.</p>
+
+                <div class="expertise-grid mb-5">
+                    <div class="expertise-item" data-skill="backend">
+                        <div class="skill-radial" data-percent="95">
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <h3>Backend Engineering</h3>
+                        <div class="skill-details">
+                            <p>Python · Django · Flask · REST · GraphQL</p>
+                            <div class="skill-meter">
+                                <div class="meter-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        
+                    
+                    <div class="expertise-item" data-skill="cloud">
+                        <div class="skill-radial" data-percent="90">
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <h3>Cloud Infrastructure</h3>
+                        <div class="skill-details">
+                            <p>AWS · GCP · Kubernetes · Terraform · Docker</p>
+                            <div class="skill-meter">
+                                <div class="meter-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expertise-item" data-skill="devops">
+                        <div class="skill-radial" data-percent="88">
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <h3>DevOps Engineering</h3>
+                        <div class="skill-details">
+                            <p>CI/CD · GitOps · Monitoring · SRE</p>
+                            <div class="skill-meter">
+                                <div class="meter-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expertise-item" data-skill="frontend">
+                        <div class="skill-radial" data-percent="85">
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <h3>Frontend Engineering</h3>
+                        <div class="skill-details">
+                            <p>ReactJS · JavaScript · HTML5 · CSS3 · Bootstrap</p>
+                            <div class="skill-meter">
+                                <div class="meter-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Software Developer Intern @ TransOrg Analytics
-                    <div class="date"><i class="fa fa-calendar"></i> June 2022 - July 2023</div>
+
+                <div class="tech-matrix">
+                    <div class="matrix-grid">
+                        <div class="tech-card" data-tech="python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                        <div class="tech-card" data-tech="aws">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                        <div class="tech-card" data-tech="docker">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                        <div class="tech-card" data-tech="kubernetes">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Java</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                        <div class="tech-card" data-tech="react">
+                            <i class="fab fa-react"></i>
+                            <span>ReactJS</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                        <div class="tech-card" data-tech="terraform">
+                            <i class="fas fa-code-branch"></i>
+                            <span>C++</span>
+                            <div class="tech-progress"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p>During my internship at TransOrg Analytics, I engineered and maintained the TransOrg Analytics and PicklAI systems using Python and proprietary in-house libraries to ensure peak performance...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Software Developer Intern @ Web Prism IT Solution
-                    <div class="date"><i class="fa fa-calendar"></i> May 2021 - July 2021</div>
-                </div>
-                <div class="card-body">
-                    <p>At Web Prism IT Solution, I led the integration of ReactJS, Python, Django, and REST APIs for seamless full-stack projects within a collaborative team...</p>
-                </div>
-            </div>
-        </div>
-        <div id="projects" class="section projects-summary wide-section">
-            <h2>Projects</h2>
-            <div class="card">
-                <div class="card-header">
-                    Machine Learning-Driven Turbulence Analysis | MTech Project
-                    <div class="date"><i class="fa fa-calendar"></i> July 2023 - December 2023</div>
-                </div>
-                <div class="card-body">
-                    <p>For my MTech project at IIT Kharagpur, I developed an advanced neural network model to predict the pressure strain in turbulent flows...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Learning Management System | IIT Kharagpur
-                    <div class="date"><i class="fa fa-calendar"></i> January 2023 - April 2023</div>
-                </div>
-                <div class="card-body">
-                    <p>Under the guidance of Prof. Kaushal Kumar Bhagat at IIT Kharagpur, I developed a robust Python-backed web-based Learning Management System (LMS)...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Freelancers Marketplace | Self Project
-                    <div class="date"><i class="fa fa-calendar"></i> December 2021</div>
-                </div>
-                <div class="card-body">
-                    <p>I created a freelancer marketplace using Django (REST) and Python. The platform enhances user experience through advanced search capabilities...</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    Ecommerce Website | Self Project
-                    <div class="date"><i class="fa fa-calendar"></i> April 2022</div>
-                </div>
-                <div class="card-body">
-                    <p>In my self-initiated project, I created a captivating web-based e-commerce application using Python, Django Rest API, ReactJS, HTML, CSS, and JavaScript...</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add other sections similarly -->
-        <div id="contact" class="section contact-summary">
-            <h2>Contact Us</h2>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/ayush-saxena-8b8213195" target="_blank" class="fa fa-linkedin fa-2x"></a>
-                <a href="https://www.facebook.com/ayush.saxena.3760" target="_blank" class="fa fa-facebook fa-2x"></a>
-                <a href="https://www.instagram.com/ayushsaxena844" target="_blank" class="fa fa-instagram fa-2x"></a>
-                <a href="https://github.com/ayushsaxenagithub" target="_blank" class="fa fa-github fa-2x"></a>
-                <a href="https://codeforces.com/profile/ayushsaxenacodeforces" target="_blank" class="fa fa-code fa-2x"></a>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+</section>
+
+
+
+  <!-- Journey Timeline Section -->
+<!-- updated Journey Timeline Section -->
+<section id="journey" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-5">My Journey</h2>
+      <div class="timeline">
+  
+        <!-- 2019 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="timeline-icon bg-primary text-white">2019</div>
+          <div class="timeline-content">
+            <h4>Joined IIT Kharagpur</h4>
+            <p>Began Dual Degree program in Ocean Engineering & Naval Architecture.</p>
+          </div>
+        </div>
+  
+        <!-- May 2021 -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+          <div class="timeline-icon bg-primary text-white">May 2021</div>
+          <div class="timeline-content">
+            <h4>Internship @ Web Prism IT Solution</h4>
+            <p>Spearheaded ReactJS & Django integration and API development.</p>
+          </div>
+        </div>
+  
+        <!-- Jun 2022 -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+          <div class="timeline-icon bg-primary text-white">Jun 2022</div>
+          <div class="timeline-content">
+            <h4>Internship @ TransOrg Analytics</h4>
+            <p>Engineered analytics systems and managed AWS infrastructure.</p>
+          </div>
+        </div>
+  
+        <!-- B.Tech Project -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+          <div class="timeline-icon bg-primary text-white">Dec 2022</div>
+          <div class="timeline-content">
+            <h4>B.Tech Capstone</h4>
+            <p>Built PilotLMS – a Django-based learning management system with role-based dashboards and analytics.</p>
+          </div>
+        </div>
+  
+        <!-- MTech Project -->
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="600">
+          <div class="timeline-icon bg-primary text-white">Jul 2023</div>
+          <div class="timeline-content">
+            <h4>MTech Project</h4>
+            <p>Developed neural network for turbulence analysis with MSE 8.777e-07 and R² 0.98.</p>
+          </div>
+        </div>
+  
+        <!-- Graduation -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="700">
+          <div class="timeline-icon bg-primary text-white">Apr 2024</div>
+          <div class="timeline-content">
+            <h4>Graduated from IIT Kharagpur</h4>
+            <p>Completed B.Tech + M.Tech dual degree successfully.</p>
+          </div>
+        </div>
+
+                <!-- Started @ Turing -->
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+            <div class="timeline-icon bg-primary text-white">Jun 2024</div>
+            <div class="timeline-content">
+                <h4>Job Started @ Turing</h4>
+                <p>Joined Turing to debug/enhance LLM training repositories and build automated evaluation frameworks.</p>
+            </div>
+            </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-4">Work Experience</h2>
+      <div class="card-deck">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5>LLM Trainer @ Turing</h5>
+            <p><small>Jun 2024 – Present</small></p>
+            <p>Debug and enhance LLM training repos; build Flask/Django codebases; implement automated evaluation frameworks achieving 99.5% accuracy.</p>
+          </div>
+        </div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5>Software Developer Intern @ TransOrg Analytics</h5>
+            <p><small>Jun 2022 – Jul 2023</small></p>
+            <p>Developed analytics systems with Python; managed AWS EC2, Boto3, Route53 & S3; improved security via RBAC.</p>
+          </div>
+        </div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5>Software Developer Intern @ Web Prism IT</h5>
+            <p><small>May 2021 – Jul 2021</small></p>
+            <p>Led ReactJS & Django integration; designed RESTful APIs; optimized backend schemas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="zoom-in">Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>Driven Turbulence Analysis</h5>
+              <p>Neural network predicting pressure strain in turbulence.</p>
+              <a href="https://github.com/ayushsaxenagithub/DrivenTurbulenceAnalysis" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>PilotLMS</h5>
+              <p>Django LMS with role-based dashboards and analytics.</p>
+              <a href="https://github.com/ayushsaxenagithub/PilotLMS" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>E-Commerce React/Django</h5>
+              <p>Full-stack shop with DRF backend and React frontend.</p>
+              <a href="https://github.com/ayushsaxenagithub/e-commerce" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>Freelancer Marketplace</h5>
+              <p>Platform for posting and bidding on projects (Django).</p>
+              <a href="https://github.com/ayushsaxenagithub/Freelancer_MarketPlace" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>Digit Recognizer</h5>
+              <p>CNN-based handwritten digit predictor with GUI.</p>
+              <a href="https://github.com/ayushsaxenagithub/digit_recognizer" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <!-- <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="fade-in">Gallery</h2>
+      <div class="row">
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left"><img src="images1.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left" data-aos-delay="100"><img src="images2.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left" data-aos-delay="200"><img src="images3.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left" data-aos-delay="300"><img src="images4.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left" data-aos-delay="400"><img src="images5.jpg" class="img-fluid rounded" alt=""></div>
+        <div class="col-6 col-md-4 mb-3" data-aos="flip-left" data-aos-delay="500"><img src="images6.jpg" class="img-fluid rounded" alt=""></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 text-center">
+    <div class="container" data-aos="fade-in">
+      <h2>Contact Me</h2>
+      <div class="social-icons mt-3">
+        <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" class="fa fa-linkedin fa-2x mx-2"></a>
+        <a href="https://github.com/ayushsaxenagithub?tab=repositories" target="_blank" class="fa fa-github fa-2x mx-2"></a>
+        <a href="mailto:ayush.asax.saxena@gmail.com" class="fa fa-envelope fa-2x mx-2"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-primary text-white text-center">
+    <div class="container"><p class="mb-0">&copy; 2025 Ayush Saxena</p></div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
