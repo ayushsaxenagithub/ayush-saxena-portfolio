@@ -382,42 +382,198 @@ body {
   font-weight: bold;
 }
 
-/* Responsive Design */
+/* MOBILE SUPERCHARGED ANIMATIONS */
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 4rem 0;
-    text-align: center;
+  /* Quantum Navbar */
+  .navbar {
+    background: rgba(30, 58, 138, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
-  
-  .name {
-    font-size: 2.5rem;
+
+  .navbar-toggler {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    border: none;
+    background: transparent;
+    z-index: 1000;
   }
-  
-  .designation {
-    font-size: 1.5rem;
+
+  .navbar-toggler__lines {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  
-  .hero-image {
+
+  .navbar-toggler__lines:nth-child(1) {
+    top: 8px;
+    transform-origin: 15px 2px;
+  }
+
+  .navbar-toggler__lines:nth-child(2) {
+    top: 15px;
+    transform-origin: 15px 2px;
+  }
+
+  .navbar-toggler__lines:nth-child(3) {
+    top: 22px;
+    transform-origin: 15px 2px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler__lines:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background: #ffd700;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler__lines:nth-child(2) {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler__lines:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background: #ffd700;
+  }
+
+  /* Holographic Mobile Menu */
+  .navbar-collapse {
+    background: linear-gradient(45deg, 
+      rgba(30, 58, 138, 0.95),
+      rgba(59, 130, 246, 0.95));
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+    transform-origin: top right;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem !important;
+    margin: 0.5rem 0;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
-    max-width: 300px;    /* bump up from 300px */
-    height: 300px;       /* force a square for the circle */
-    object-fit: cover; 
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 215, 0, 0.2),
+      transparent);
+    transition: 0.6s ease;
   }
-  
-  .about-section .row {
-    flex-direction: column-reverse;
+
+  .nav-link:hover::before {
+    left: 100%;
   }
-  
-  .about-image {
-    margin-bottom: 2rem;
+
+  /* Quantum Hero Animation */
+  .hero-section {
+    perspective: 1000px;
+    overflow-x: hidden;
+  }
+
+  .hero-image {
+    animation: quantumFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
+  }
+
+  @keyframes quantumFloat {
+    0%, 100% { transform: translateY(0) rotateZ(0deg); }
+    25% { transform: translateY(-20px) rotateZ(2deg); }
+    50% { transform: translateY(10px) rotateZ(-2deg); }
+    75% { transform: translateY(-10px) rotateZ(1deg); }
+  }
+
+  .name {
+    animation: textShadowPop 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes textShadowPop {
+    0% {
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(59, 130, 246, 0);
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Holographic Card Stack */
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg,
+      rgba(59, 130, 246, 0.1),
+      rgba(255, 215, 0, 0.1));
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2),
+      0 0 60px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Neural Timeline */
+  .timeline-item {
+    position: relative;
+    transform: scale(0.95);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg,
+      rgba(59, 130, 246, 0.1),
+      rgba(255, 215, 0, 0.1));
+    opacity: 0;
+    transition: 0.4s ease;
+  }
+
+  .timeline-item:hover {
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .timeline-item:hover::before {
+    opacity: 1;
+  }
+
+  .timeline-icon {
+    background: linear-gradient(45deg, #3b82f6, #ffd700);
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
 }
-
-/* @media (max-width: 767px) {
-  .hero-image {
-    max-width: 200px;
-  }
-  .hero-content {
-    margin-top: 1.5rem;
-  }
-} */

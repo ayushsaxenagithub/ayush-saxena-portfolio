@@ -202,3 +202,136 @@ AOS.init({
     easing: 'ease-in-out',
     once: true
 });
+
+
+
+
+
+// Quantum Interactions
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 768) {
+    // Neural Network Inspired Menu
+    const navbar = document.querySelector('.navbar');
+    const menuItems = document.querySelectorAll('.nav-link');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        navbar.style.transform = 'translateY(-100%)';
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+      lastScroll = currentScroll;
+    });
+
+    // Quantum Entanglement Effect
+    menuItems.forEach(item => {
+      item.addEventListener('touchstart', () => {
+        menuItems.forEach(link => {
+          if (link !== item) {
+            link.style.transform = `translateX(${Math.random() * 20 - 10}px)
+                                   translateY(${Math.random() * 20 - 10}px)`;
+          }
+        });
+      });
+
+      item.addEventListener('touchend', () => {
+        menuItems.forEach(link => {
+          link.style.transform = '';
+        });
+      });
+    });
+
+    // Holographic Image Interaction
+    const heroImage = document.querySelector('.hero-image');
+    let touchStartTime = 0;
+
+    heroImage.addEventListener('touchstart', () => {
+      touchStartTime = Date.now();
+      heroImage.style.transform = 'scale(0.95)';
+    });
+
+    heroImage.addEventListener('touchend', () => {
+      const touchDuration = Date.now() - touchStartTime;
+      if (touchDuration < 200) {
+        heroImage.animate([
+          { transform: 'scale(1)', filter: 'brightness(1)' },
+          { transform: 'scale(1.2)', filter: 'brightness(1.2)' },
+          { transform: 'scale(1)', filter: 'brightness(1)' }
+        ], { duration: 600, easing: 'ease-out' });
+      }
+      heroImage.style.transform = '';
+    });
+
+    // Quantum Scroll Physics
+    let scrollVelocity = 0;
+    let lastTouchY = 0;
+    let isDecelerating = false;
+
+    window.addEventListener('touchstart', e => {
+      lastTouchY = e.touches[0].clientY;
+      isDecelerating = false;
+    });
+
+    window.addEventListener('touchmove', e => {
+      const deltaY = e.touches[0].clientY - lastTouchY;
+      scrollVelocity = deltaY * 1.5;
+      lastTouchY = e.touches[0].clientY;
+    });
+
+    const quantumScroll = () => {
+      if (!isDecelerating && Math.abs(scrollVelocity) > 0) {
+        window.scrollBy(0, scrollVelocity);
+        scrollVelocity *= 0.95;
+        requestAnimationFrame(quantumScroll);
+      }
+    };
+
+    window.addEventListener('touchend', () => {
+      isDecelerating = true;
+      requestAnimationFrame(quantumScroll);
+    });
+
+    // Neural Particle Effect
+    const createParticle = (x, y) => {
+      const particle = document.createElement('div');
+      particle.style.cssText = `
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: radial-gradient(#3b82f6, #ffd700);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(${x}px, ${y}px);
+      `;
+      
+      document.body.appendChild(particle);
+      
+      particle.animate([
+        { transform: `translate(${x}px, ${y}px) scale(1)`, opacity: 1 },
+        { transform: `translate(${x + Math.random() * 100 - 50}px, 
+          ${y + Math.random() * 100 - 50}px) scale(0)`, opacity: 0 }
+      ], { duration: 1000, easing: 'ease-out' });
+      
+      setTimeout(() => particle.remove(), 1000);
+    };
+
+    document.addEventListener('touchstart', e => {
+      for (let i = 0; i < 15; i++) {
+        createParticle(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    });
+  }
+
+  // Quantum Resonance Initializer
+  AOS.init({
+    disable: window.innerWidth > 768,
+    duration: 1000,
+    once: true,
+    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    mirror: false,
+    anchorPlacement: 'top-bottom'
+  });
+});
