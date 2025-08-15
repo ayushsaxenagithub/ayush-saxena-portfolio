@@ -1,129 +1,80 @@
-<!-- Ayush Saxena – Bootstrap 5 Portfolio (Dark theme + mobile polish) -->
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YTX7YPE4F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-1YTX7YPE4F');
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NWTHS9Z');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ayush Saxena | Portfolio</title>
-  <meta name="description" content="Ayush Saxena – MLOps & Software Engineer, Founding Engineer at SwissPlat" />
-  <meta name="keywords" content="Ayush Saxena, Software Developer, MLOps, SwissPlat, Django, React, LLM" />
-
-  <!-- Bootstrap 5 -->
+  <meta name="description" content="Ayush Saxena – MLOps Engineer & Software Developer (ReactJS/Django). Backends, ML pipelines, and cloud infrastructure. IIT Kharagpur (Dual Degree, ’24)." />
+  <meta name="keywords" content="Ayush Saxena, MLOps, Software Engineer, ReactJS, Django, Kubernetes, AWS, LLM, IIT Kharagpur" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome 6 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-  <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
   <style>
     :root{
-      --ayush-primary:#60a5fa;
-      --ayush-bg:#0a0f1a;
-      --ayush-surface:#0f1624;
-      --ayush-surface-2:#121a2b;
-      --ayush-border:rgba(255,255,255,.06);
+      --ayush-primary:#7c3aed;
+      --ayush-accent:#22d3ee;
+      --ayush-bg:#0b0f1a;
+      --ayush-surface:#0f1629;
+      --ayush-surface-2:#101a31;
+      --ayush-border:rgba(255,255,255,.07);
       --ayush-text:#dbe2f1;
-      --nav-h: 72px; /* will be updated by JS */
+      --nav-h:76px;
     }
-
     html{scroll-behavior:smooth}
-    body{background:var(--ayush-bg); color:var(--ayush-text)}
+    body{background:var(--ayush-bg);color:var(--ayush-text);padding-top:var(--nav-h)}
     section[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
+    @media (min-width:1200px){html{font-size:18px}}
+    @media (min-width:1600px){html{font-size:19px}}
+    @media (min-width:1440px){.container,.container-xxl{max-width:1500px}}
+    @media (min-width:1800px){.container,.container-xxl{max-width:1580px}}
 
-    /* Make page a bit wider and text larger on big screens */
-    @media (min-width: 1200px){ html{font-size:17px} }
-    @media (min-width: 1400px){ .container, .container-xxl{max-width:1400px} }
+    .navbar{position:fixed;top:0;left:0;right:0;min-height:var(--nav-h);z-index:1080;backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);background:rgba(11,15,26,.78)!important;border-bottom:1px solid var(--ayush-border)}
+    .navbar-brand{font-weight:800;letter-spacing:.3px}
+    .nav-link{font-weight:600}
+    .nav-link.active{background:linear-gradient(90deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-    /* Preloader */
-    #preloader{position:fixed;inset:0;display:grid;place-items:center;background:var(--ayush-bg);z-index:1055}
-    .loader{width:54px;height:54px;border:4px solid rgba(255,255,255,.1);border-top-color:var(--ayush-primary);border-radius:50%;animation:spin 1s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-
-    /* Navbar */
-    .navbar{min-height:var(--nav-h);z-index:1080;backdrop-filter:saturate(140%) blur(6px);background:rgba(10,15,26,.75)!important;border-bottom:1px solid var(--ayush-border)}
-    .navbar-brand{font-weight:700}
-    .nav-link{font-weight:500}
-
-    /* Hero */
     .hero{background:
-      radial-gradient(1200px 500px at 10% -10%, rgba(96,165,250,.2), transparent),
-      radial-gradient(800px 400px at 110% 10%, rgba(96,165,250,.18), transparent),
-      linear-gradient(180deg, #0b1323 0%, #0a0f1a 100%);
-      color:var(--ayush-text)}
-    .hero .container{padding-top:calc(var(--nav-h) + 3.5rem);padding-bottom:5.5rem}
-    .hero-title{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:800}
-    .profile-photo{width:230px;height:230px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,.08);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+      radial-gradient(1200px 520px at -10% -10%, rgba(124,58,237,.25), transparent),
+      radial-gradient(900px 520px at 110% 10%, rgba(34,211,238,.22), transparent),
+      linear-gradient(180deg,#0d1428 0%, #0b0f1a 100%)}
+    .hero .container-xxl{padding-top:calc(var(--nav-h) + 1.6rem);padding-bottom:4.5rem}
+    .hero-title{font-size:clamp(2.6rem,5.5vw,4.3rem);font-weight:900;line-height:1.05}
+    .hero-sub{font-size:1.15rem}
+    .profile-photo{width:268px;height:268px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,.08);box-shadow:0 22px 60px rgba(0,0,0,.5)}
 
-    /* Cards & utilities */
-    .glass-card{background:var(--ayush-surface);border:1px solid var(--ayush-border);box-shadow:0 20px 40px rgba(0,0,0,.35);border-radius:16px}
-    .section-title{font-weight:800}
-    .icon-xl{font-size:1.25rem}
-    .rounded-2xl{border-radius:1rem}
-    .text-muted{color:rgba(219,226,241,.7)!important}
+    .glass-card{background:var(--ayush-surface);border:1px solid var(--ayush-border);box-shadow:0 24px 60px rgba(0,0,0,.4);border-radius:18px}
+    .section-title{font-weight:900}
+    .rounded-2xl{border-radius:1.25rem}
+    .text-muted{color:rgba(219,226,241,.72)!important}
+    .btn-gradient{background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));border:none;color:#0a0f1a}
+    .btn-gradient:hover{filter:brightness(1.05)}
+    footer{background:linear-gradient(135deg,#0e1836,#0b0f1a);border-top:1px solid var(--ayush-border)}
 
-    /* Ensure hero quick-facts are readable on dark */
-    .hero .glass-card{background:var(--ayush-surface)}
+    .timeline{position:relative;padding-left:1.7rem}
+    .timeline::before{content:"";position:absolute;left:.65rem;top:.25rem;bottom:.25rem;width:2px;background:linear-gradient(180deg,var(--ayush-primary),transparent)}
+    .t-item{position:relative;margin-bottom:1.4rem}
+    .t-dot{position:absolute;left:-.25rem;top:.28rem;width:16px;height:16px;border-radius:50%;background:var(--ayush-primary);box-shadow:0 0 0 4px rgba(124,58,237,.15)}
 
-    /* Timeline */
-    .timeline{position:relative;padding-left:1.5rem}
-    .timeline::before{content:"";position:absolute;left:.6rem;top:.25rem;bottom:.25rem;width:2px;background:linear-gradient(180deg,var(--ayush-primary),transparent)}
-    .t-item{position:relative;margin-bottom:1.25rem}
-    .t-dot{position:absolute;left:-.2rem;top:.3rem;width:16px;height:16px;border-radius:50%;background:var(--ayush-primary);box-shadow:0 0 0 4px rgba(96,165,250,.15)}
-
-    /* Sections */
-    .bg-alt{background:var(--ayush-surface-2)}
-
-    footer{background:linear-gradient(135deg,#0d1a34,#0a0f1a);border-top:1px solid var(--ayush-border)}
-
-    /* Mobile polish */
-    @media (max-width: 575.98px){
-      .hero .container{padding-top:6.5rem;padding-bottom:4rem}
-      .profile-photo{width:200px;height:200px}
-      .btn{padding:.6rem 1rem}
+    @media (max-width:575.98px){
+      .hero .container-xxl{padding-top:calc(var(--nav-h) + .9rem);padding-bottom:3rem}
+      .profile-photo{width:230px;height:230px}
+      .btn{padding:.7rem 1.05rem}
     }
-    /* Horizontal scroll for quick-facts on small screens */
-    .scroll-cards{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.5rem;scroll-snap-type:x mandatory}
-    .scroll-cards>.col{flex:0 0 80%; max-width:80%; scroll-snap-align:start}
-    @media (min-width: 768px){ .scroll-cards{display:grid;overflow:visible;grid-template-columns:repeat(4,1fr)} .scroll-cards>.col{flex:initial;max-width:100%} }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    body {
-      padding-top: 60px; /* Adjust if needed based on navbar height */
-    }
+    .stat{display:flex;align-items:center;gap:.75rem;justify-content:center}
+    .stat .num{font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .filter-pill{cursor:pointer}
+    .filter-pill.active{background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));color:#0a0f1a;border-color:transparent}
+    .project-card{transition:transform .2s ease,opacity .2s ease}
+    .project-card:hover{transform:translateY(-4px)}
   </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="80" tabindex="0">
-
-  <!-- Preloader -->
-  <div id="preloader"><div class="loader"></div></div>
-
-  <!-- Navbar -->
+<body data-bs-spy="scroll" data-bs-target="#topnav" tabindex="0">
   <nav id="topnav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container-xxl">
       <a class="navbar-brand" href="#home">Ayush Saxena</a>
-      <button class="navbar-toggler" title="Toggle navigation" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
@@ -143,73 +94,48 @@
     </div>
   </nav>
 
-  <!-- Hero: photo LEFT, text RIGHT -->
   <header id="home" class="hero">
     <div class="container-xxl">
-      <div class="row align-items-center g-4">
-        <!-- Photo left -->
+      <div class="row align-items-center g-5">
         <div class="col-12 col-lg-6 text-center" data-aos="fade-right">
           <img src="img/profile.jpg" class="profile-photo" alt="Ayush Saxena profile" />
         </div>
-        <!-- Text right -->
         <div class="col-12 col-lg-6" data-aos="fade-left">
-          <h1 class="hero-title mb-2">Hi, I'm <span class="text-primary">Ayush Saxena</span></h1>
-          <p class="fs-5 mb-4">MLOps & Software Engineer — building reliable backends, ML pipelines, and cloud infra. Founding Engineer at <strong>SwissPlat</strong> (LLM‑powered B2B trade). IIT Kharagpur (Dual Degree, ’24).</p>
+          <h1 class="hero-title mb-2">Hi, I'm <span style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent">Ayush Saxena</span></h1>
+          <p class="hero-sub mb-3">MLOps Engineer & Software Developer <span class="text-muted">(ReactJS · Django)</span></p>
+          <p class="lead mb-4">I build reliable backends, ML pipelines, and cloud infrastructure with observability and guardrails.</p>
           <div class="d-flex flex-wrap gap-2">
-            <a href="#contact" class="btn btn-primary me-2"><i class="fa-solid fa-paper-plane me-2"></i>Contact</a>
-            <a href="https://github.com/ayushsaxenagithub?tab=repositories" target="_blank" class="btn btn-outline-light"><i class="fa-brands fa-github me-2"></i>GitHub</a>
-            <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" class="btn btn-outline-light"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
+            <a href="#contact" class="btn btn-gradient me-2"><i class="fa-solid fa-paper-plane me-2"></i>Contact</a>
+            <a href="https://github.com/ayushsaxenagithub?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+            <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
           </div>
-        </div>
-      </div>
-
-      <!-- Quick Facts (visible on dark + mobile scroll) -->
-      <div class="row g-3 mt-5 scroll-cards" data-aos="zoom-in">
-        <div class="col">
-          <div class="glass-card p-4 text-center rounded-2xl h-100">
-            <div class="fw-bold small text-uppercase text-muted">Primary Stack</div>
-            <div class="mt-2 fs-6"><i class="fa-solid fa-code icon-xl me-2 text-primary"></i>Python · Django · React</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="glass-card p-4 text-center rounded-2xl h-100">
-            <div class="fw-bold small text-uppercase text-muted">Cloud & DevOps</div>
-            <div class="mt-2 fs-6"><i class="fa-solid fa-cloud-arrow-up icon-xl me-2 text-primary"></i>AWS · GCP · Docker · K8s</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="glass-card p-4 text-center rounded-2xl h-100">
-            <div class="fw-bold small text-uppercase text-muted">Focus Areas</div>
-            <div class="mt-2 fs-6"><i class="fa-solid fa-diagram-project icon-xl me-2 text-primary"></i>Microservices · CI/CD · LLM</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="glass-card p-4 text-center rounded-2xl h-100">
-            <div class="fw-bold small text-uppercase text-muted">Interests</div>
-            <div class="mt-2 fs-6"><i class="fa-solid fa-compass-drafting icon-xl me-2 text-primary"></i>Product · Systems · Strategy</div>
+          <div class="row g-3 mt-4">
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="2">0</span><span class="text-muted">yrs exp</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="15">0</span><span class="text-muted">techs</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="10">0</span><span class="text-muted">projects</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="1">0</span><span class="text-muted">book</span></div></div>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- About -->
   <section id="about" class="py-5 bg-alt">
     <div class="container-xxl">
-      <div class="row align-items-center g-4">
+      <div class="row align-items-center g-5">
         <div class="col-lg-7" data-aos="fade-up">
           <h2 class="section-title mb-3">About Me</h2>
-          <p class="lead">I’m a software developer with a strong foundation in backend systems, cloud infrastructure, and MLOps. I build reliable APIs, secure architectures, and data‑driven features. At Turing, I owned ML pipelines and production services; at SwissPlat, I’m building an LLM‑powered platform for global trade.</p>
+          <p class="lead">I’m a software developer with a strong foundation in backend systems, cloud infrastructure, and MLOps. I build reliable APIs, secure architectures, and data-driven features. At Turing, I owned ML pipelines and production services; I also built LLM features for supplier discovery, RFQs, and pricing insights.</p>
           <ul class="list-unstyled mt-3 mb-4">
-            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>IIT Kharagpur — Dual Degree in Ocean Engineering & Naval Architecture (’24)</li>
-            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Neural network for turbulence analysis (MSE 8.777e‑07; RMSE 0.00094; R² ≈ 0.9975)</li>
-            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>PilotLMS — Django LMS with role‑based dashboards & analytics</li>
-            <li class="mb-0"><i class="fa-solid fa-check text-primary me-2"></i>Events Head (NAROES) — led 30+ team; executed institute‑scale events</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>IIT Kharagpur — Dual Degree in Ocean Engineering & Naval Architecture (’24)</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>Neural network for turbulence analysis (MSE 8.777e-07; RMSE 0.00094; R² ≈ 0.9975)</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>PilotLMS — Django LMS with role-based dashboards & analytics</li>
+            <li class="mb-0"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>Events Head (NAROES) — led 30+ team; executed institute-scale events</li>
           </ul>
         </div>
         <div class="col-lg-5" data-aos="fade-left">
           <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-3"><i class="fa-solid fa-briefcase me-2 text-primary"></i>What I Do</h5>
+            <h5 class="mb-3"><i class="fa-solid fa-briefcase me-2" style="color:#a78bfa"></i>What I Do</h5>
             <ul class="mb-0">
               <li class="mb-2">Design scalable backends (REST/GraphQL) with Django/DRF & Flask.</li>
               <li class="mb-2">MLOps: data pipelines, training, evaluation, deployment, monitoring.</li>
@@ -222,7 +148,6 @@
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="py-5">
     <div class="container-xxl">
       <h2 class="section-title mb-4" data-aos="fade-up">Technical Skills</h2>
@@ -230,33 +155,33 @@
         <div class="col-lg-7" data-aos="fade-right">
           <div class="mb-3">
             <strong>Backend Engineering</strong>
-            <div class="progress bg-dark"><div class="progress-bar bg-primary" data-value="95"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar" data-value="95" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
             <small class="text-muted">Python · Django · DRF · Flask · FastAPI · GraphQL</small>
           </div>
           <div class="mb-3">
             <strong>Cloud & Infra</strong>
-            <div class="progress bg-dark"><div class="progress-bar bg-primary" data-value="90"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar" data-value="90" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
             <small class="text-muted">AWS · GCP · Terraform · Docker · Kubernetes · Nginx</small>
           </div>
           <div class="mb-3">
             <strong>MLOps & SRE</strong>
-            <div class="progress bg-dark"><div class="progress-bar bg-primary" data-value="88"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar" data-value="88" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
             <small class="text-muted">Pipelines · CI/CD · Observability · Rollbacks · RBAC</small>
           </div>
           <div class="mb-3">
             <strong>Frontend</strong>
-            <div class="progress bg-dark"><div class="progress-bar bg-primary" data-value="85"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar" data-value="85" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
             <small class="text-muted">React · TypeScript · Bootstrap · Responsive UI</small>
           </div>
           <div>
             <strong>Data & LLM</strong>
-            <div class="progress bg-dark"><div class="progress-bar bg-primary" data-value="82"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar" data-value="82" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
             <small class="text-muted">Pandas · SQL · Retrieval · Evaluation · Agents</small>
           </div>
         </div>
         <div class="col-lg-5" data-aos="fade-left">
           <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-3"><i class="fa-solid fa-layer-group me-2 text-primary"></i>Tech I Love</h5>
+            <h5 class="mb-3"><i class="fa-solid fa-layer-group me-2" style="color:#a78bfa"></i>Tech I Love</h5>
             <div class="d-flex flex-wrap gap-2">
               <span class="badge border text-bg-dark">Python</span>
               <span class="badge border text-bg-dark">Django/DRF</span>
@@ -274,7 +199,6 @@
     </div>
   </section>
 
-  <!-- Journey -->
   <section id="journey" class="py-5 bg-alt">
     <div class="container-xxl">
       <h2 class="section-title mb-4" data-aos="fade-up">Journey</h2>
@@ -283,119 +207,145 @@
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">May 2021 — Internship @ Web Prism IT Solution</h6><p class="text-muted mb-0">React + Django integration, REST APIs, backend optimization.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jun 2022 — Internship @ TransOrg Analytics</h6><p class="text-muted mb-0">Analytics systems on AWS; security via RBAC.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Dec 2022 — B.Tech Capstone</h6><p class="text-muted mb-0">Built <strong>PilotLMS</strong> with dashboards & analytics.</p></div></div>
-        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jul 2023 — M.Tech Project</h6><p class="text-muted mb-0">Turbulence NN — MSE 8.777e‑07; RMSE 0.00094; R² 0.9975.</p></div></div>
+        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jul 2023 — M.Tech Project</h6><p class="text-muted mb-0">Turbulence NN — MSE 8.777e-07; RMSE 0.00094; R² 0.9975.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Apr 2024 — Graduated IIT KGP</h6><p class="text-muted mb-0">Completed Dual Degree.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jun 2024 — MLOps / Software Engineer @ Turing</h6><p class="text-muted mb-0">Automated ML pipelines and shipped production services.</p></div></div>
-        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">2025 — Founding Engineer @ SwissPlat</h6><p class="text-muted mb-0">Created an LLM solution for supplier discovery, RFQs, and price intelligence.</p></div></div>
+        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">2025 — SwissPlat</h6><p class="text-muted mb-0">Built an LLM solution for supplier discovery, RFQs, and price intelligence.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
   <section id="experience" class="py-5">
     <div class="container-xxl">
       <h2 class="section-title mb-4" data-aos="fade-up">Experience</h2>
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-1">MLOps / Software Engineer</h5>
-            <div class="text-primary fw-semibold">Turing · Jun 2024 – Present</div>
-            <ul class="mt-3 mb-0">
-              <li>Owned ML pipelines from data prep → training → eval → deployment.</li>
-              <li>CI/CD for ML services (GitHub Actions, Docker, K8s) with rollback safety.</li>
-              <li>Monitoring (Prometheus/logging), SLOs, and error budgets for services.</li>
-            </ul>
+      <div class="accordion" id="exp">
+        <div class="accordion-item glass-card mb-3">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e1">
+              Turing — MLOps / Software Engineer (Jun 2024 – Present)
+            </button>
+          </h2>
+          <div id="e1" class="accordion-collapse collapse" data-bs-parent="#exp">
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>Owned ML pipelines from data prep → training → eval → deployment.</li>
+                <li>CI/CD for ML services (GitHub Actions, Docker, K8s) with rollback safety.</li>
+                <li>Monitoring (Prometheus/logging), SLOs, and error budgets for services.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-          <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-1">Founding Engineer</h5>
-            <div class="text-primary fw-semibold">SwissPlat · 2025 – Present</div>
-            <ul class="mt-3 mb-0">
-              <li>Architected a multi‑tenant Django platform for B2B trade.</li>
-              <li>Built an LLM solution for supplier matching, RFQs, and pricing insights.</li>
-              <li>Retrieval + vector search, prompt guardrails, offline evals, and analytics.</li>
-            </ul>
+        <div class="accordion-item glass-card mb-3">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e2">
+              SwissPlat — Engineer (2025 – Present)
+            </button>
+          </h2>
+          <div id="e2" class="accordion-collapse collapse" data-bs-parent="#exp">
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>Multi-tenant Django platform for B2B trade.</li>
+                <li>LLM features for supplier matching, RFQs, and pricing insights.</li>
+                <li>Vector search, prompt guardrails, offline evals, Celery, S3 analytics.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-1">Software Developer Intern</h5>
-            <div class="text-primary fw-semibold">TransOrg Analytics · Jun 2022 – Jul 2023</div>
-            <ul class="mt-3 mb-0">
-              <li>Engineered analytics systems; optimized data flows on AWS.</li>
-              <li>Managed EC2/S3/Route53; hardened security with RBAC.</li>
-            </ul>
+        <div class="accordion-item glass-card mb-3">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e3">
+              TransOrg Analytics — Software Developer Intern (Jun 2022 – Jul 2023)
+            </button>
+          </h2>
+          <div id="e3" class="accordion-collapse collapse" data-bs-parent="#exp">
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>Engineered analytics systems; optimized data flows on AWS.</li>
+                <li>Managed EC2/S3/Route53; hardened security with RBAC.</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-1">Software Developer Intern</h5>
-            <div class="text-primary fw-semibold">Web Prism IT · May 2021 – Jul 2021</div>
-            <ul class="mt-3 mb-0">
-              <li>React + Django integrations; RESTful APIs; responsive UI.</li>
-            </ul>
+        <div class="accordion-item glass-card">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#e4">
+              Web Prism IT — Software Developer Intern (May 2021 – Jul 2021)
+            </button>
+          </h2>
+          <div id="e4" class="accordion-collapse collapse" data-bs-parent="#exp">
+            <div class="accordion-body">
+              <ul class="mb-0">
+                <li>React + Django integrations; RESTful APIs; responsive UI.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="py-5 bg-alt">
     <div class="container-xxl">
-      <h2 class="section-title mb-4" data-aos="fade-up">Projects</h2>
+      <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <h2 class="section-title mb-0" data-aos="fade-up">Projects</h2>
+        <div class="btn-group" role="group" aria-label="filters">
+          <button class="btn btn-outline-light btn-sm filter-pill active" data-filter="all">All</button>
+          <button class="btn btn-outline-light btn-sm filter-pill" data-filter="backend">Backend</button>
+          <button class="btn btn-outline-light btn-sm filter-pill" data-filter="mlops">MLOps</button>
+          <button class="btn btn-outline-light btn-sm filter-pill" data-filter="frontend">Frontend</button>
+          <button class="btn btn-outline-light btn-sm filter-pill" data-filter="llm">LLM</button>
+        </div>
+      </div>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="backend llm mlops" data-aos="fade-up">
           <div class="glass-card p-4 h-100">
             <h5>SwissPlat LLM Platform</h5>
-            <p class="text-muted">LLM‑powered supplier discovery, RFQ automation, pricing insights; retrieval with vector DB, guardrails, and offline evals.</p>
+            <p class="text-muted">Supplier discovery, RFQ automation, price insights; retrieval with vector DB, guardrails, offline evals.</p>
             <span class="badge border text-bg-dark">Django</span>
             <span class="badge border text-bg-dark">PostgreSQL</span>
             <span class="badge border text-bg-dark">Celery</span>
             <span class="badge border text-bg-dark">LLM</span>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="mlops backend" data-aos="fade-up" data-aos-delay="50">
           <div class="glass-card p-4 h-100">
             <h5>Driven Turbulence Analysis</h5>
             <p class="text-muted">Neural network predicting pressure strain in turbulence; strong metrics on test sets.</p>
-            <a href="https://github.com/ayushsaxenagithub/DrivenTurbulenceAnalysis" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+            <a href="https://github.com/ayushsaxenagithub/DrivenTurbulenceAnalysis" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">GitHub</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="backend frontend" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card p-4 h-100">
             <h5>PilotLMS</h5>
-            <p class="text-muted">Django LMS with role‑based dashboards, reports, and analytics. Clean admin & APIs.</p>
-            <a href="https://github.com/ayushsaxenagithub/PilotLMS" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+            <p class="text-muted">Django LMS with role-based dashboards, reports, and analytics.</p>
+            <a href="https://github.com/ayushsaxenagithub/PilotLMS" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">GitHub</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="frontend backend" data-aos="fade-up" data-aos-delay="150">
           <div class="glass-card p-4 h-100">
-            <h5>E‑Commerce (React/Django)</h5>
+            <h5>E-Commerce (React/Django)</h5>
             <p class="text-muted">DRF backend + React frontend, JWT auth, carts and orders.</p>
-            <a href="https://github.com/ayushsaxenagithub/e-commerce" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+            <a href="https://github.com/ayushsaxenagithub/e-commerce" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">GitHub</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="backend" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card p-4 h-100">
             <h5>Freelancer Marketplace</h5>
-            <p class="text-muted">Posting & bidding platform; messaging; escrow‑ready design.</p>
-            <a href="https://github.com/ayushsaxenagithub/Freelancer_MarketPlace" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+            <p class="text-muted">Posting & bidding platform; messaging; escrow-ready design.</p>
+            <a href="https://github.com/ayushsaxenagithub/Freelancer_MarketPlace" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">GitHub</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="col-md-6 col-lg-4 project-card" data-tags="mlops frontend" data-aos="fade-up" data-aos-delay="250">
           <div class="glass-card p-4 h-100">
             <h5>Digit Recognizer</h5>
-            <p class="text-muted">CNN‑based digit predictor with a simple GUI; solid accuracy on MNIST.</p>
-            <a href="https://github.com/ayushsaxenagithub/digit_recognizer" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+            <p class="text-muted">CNN-based digit predictor with a simple GUI; solid accuracy on MNIST.</p>
+            <a href="https://github.com/ayushsaxenagithub/digit_recognizer" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">GitHub</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Publications / Books -->
   <section id="publications" class="py-5">
     <div class="container-xxl">
       <h2 class="section-title mb-4" data-aos="fade-up">Publications & Writing</h2>
@@ -403,11 +353,11 @@
         <div class="col-md-6" data-aos="fade-up">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">Book — Data Structures & Algorithms (DSA)</h5>
-            <div class="text-primary fw-semibold mb-2">Published 2025</div>
-            <p class="mb-2">Interview‑ready guide with patterns, annotated solutions, and complexity trade‑offs. Backend engineer’s perspective.</p>
+            <div class="fw-semibold mb-2" style="color:#93c5fd">Published 2025</div>
+            <p class="mb-2">Interview-ready guide with patterns, annotated solutions, and complexity trade-offs. Backend engineer’s perspective.</p>
             <div>
               <a href="#" class="btn btn-sm btn-primary disabled" aria-disabled="true"><i class="fa-solid fa-book me-2"></i>Preview</a>
-              <a href="#" class="btn btn-sm btn-outline-light disabled" aria-disabled="true"><i class="fa-solid fa-cart-shopping me-2"></i>Buy (link soon)</a>
+              <a href="#" class="btn btn-sm btn-outline-light disabled" aria-disabled="true"><i class="fa-solid fa-cart-shopping me-2"></i>Buy (soon)</a>
             </div>
           </div>
         </div>
@@ -416,8 +366,8 @@
             <h5 class="mb-1">Articles & Posts</h5>
             <ul class="mb-0">
               <li class="mb-2">Designing clean APIs with Django REST Framework</li>
-              <li class="mb-2">Shipping LLM‑powered features safely: evals & observability</li>
-              <li class="mb-0">From Docker to K8s: a junior‑friendly migration checklist</li>
+              <li class="mb-2">Shipping LLM-powered features safely: evals & observability</li>
+              <li class="mb-0">From Docker to K8s: a junior-friendly migration checklist</li>
             </ul>
           </div>
         </div>
@@ -425,7 +375,6 @@
     </div>
   </section>
 
-  <!-- Leadership & Activities -->
   <section id="leadership" class="py-5 bg-alt">
     <div class="container-xxl">
       <h2 class="section-title mb-4" data-aos="fade-up">Leadership & Activities</h2>
@@ -433,80 +382,96 @@
         <div class="col-md-6" data-aos="fade-up">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">Events Head — NAROES</h5>
-            <div class="text-primary fw-semibold mb-2">Team of 30+ · Samudramanthan Fest</div>
-            <p class="mb-0">Planned and executed institute‑level events, coordinated sponsors and logistics; improved operations and participation.</p>
+            <div class="fw-semibold mb-2" style="color:#93c5fd">Team of 30+ · Samudramanthan Fest</div>
+            <p class="mb-0">Planned and executed institute-level events, coordinated sponsors and logistics; improved operations and participation.</p>
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">General Championship — Product Track</h5>
-            <div class="text-primary fw-semibold mb-2">Team Lead · 3rd Place</div>
-            <p class="mb-0">Led builds of financial and e‑commerce products; focused on UX, data flows, and stability under load.</p>
+            <div class="fw-semibold mb-2" style="color:#93c5fd">Team Lead · 3rd Place</div>
+            <p class="mb-0">Led builds of financial and e-commerce products; focused on UX, data flows, and stability under load.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="py-5 text-center">
     <div class="container-xxl" data-aos="fade-up">
       <h2 class="section-title mb-3">Contact</h2>
       <p class="lead">Open to software/infra roles, MLOps consulting, and collaborations.</p>
       <div class="d-flex justify-content-center gap-3 mt-3">
-        <a href="mailto:ayush.asax.saxena@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope me-2"></i>Email</a>
-        <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" class="btn btn-outline-light"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
-        <a href="https://github.com/ayushsaxenagithub?tab=repositories" target="_blank" class="btn btn-outline-light"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+        <a href="mailto:ayush.asax.saxena@gmail.com" class="btn btn-gradient"><i class="fa-solid fa-envelope me-2"></i>Email</a>
+        <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
+        <a href="https://github.com/ayushsaxenagithub?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-github me-2"></i>GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-3 text-center">
     <div class="container-xxl"><div class="small">© <span id="y"></span> Ayush Saxena</div></div>
   </footer>
 
-  <!-- Floating buttons -->
   <button id="toTop" class="btn btn-primary position-fixed" style="right:16px;bottom:16px;display:none;z-index:1090" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-  <a id="chatFab" href="#contact" class="btn btn-outline-light position-fixed" style="right:16px;bottom:76px;z-index:1090"><i class="fa-solid fa-message"></i></a>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Preloader
-    window.addEventListener('load', function(){
-      const p = document.getElementById('preloader');
-      if(p){ p.style.opacity = '0'; setTimeout(()=>p.remove(), 300); }
-    });
     document.getElementById('y').textContent = new Date().getFullYear();
-    // Set CSS var for nav height + scrollspy offset
+
     const nav = document.getElementById('topnav');
     function setNavH(){
-      const h = nav ? nav.offsetHeight : 72;
+      const h = nav ? nav.offsetHeight : 76;
       document.documentElement.style.setProperty('--nav-h', h + 'px');
-      document.body.setAttribute('data-bs-offset', String(h));
+      const spy = bootstrap.ScrollSpy.getInstance(document.body);
+      if (spy) spy.dispose();
+      new bootstrap.ScrollSpy(document.body, { target: '#topnav', offset: h + 1 });
     }
     setNavH();
     window.addEventListener('resize', setNavH);
+    window.addEventListener('load', setNavH);
+    window.addEventListener('orientationchange', setNavH);
 
-    // Animate skill bars on view
-    const bars = document.querySelectorAll('#skills .progress-bar');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){
-        const v = e.target.getAttribute('data-value');
-        e.target.style.width = v + '%';
-        io.unobserve(e.target);
-      }});
-    },{threshold:0.4});
-    bars.forEach(b=>io.observe(b));
-
-    // Back to top visibility
     const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll', ()=>{
-      toTop.style.display = window.scrollY > 400 ? 'inline-flex' : 'none';
-    });
+    window.addEventListener('scroll', ()=>{ toTop.style.display = window.scrollY > 400 ? 'inline-flex' : 'none'; });
     toTop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    const bars = document.querySelectorAll('#skills .progress-bar');
+    const barIO = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.width = e.target.getAttribute('data-value') + '%'; barIO.unobserve(e.target); }});
+    },{threshold:0.4});
+    bars.forEach(b=>barIO.observe(b));
+
+    const nums = document.querySelectorAll('.num');
+    const numIO = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        const el = entry.target; const target = +el.dataset.target; let cur = 0;
+        const step = Math.max(1, Math.ceil(target/60));
+        function tick(){ cur += step; if(cur >= target){ el.textContent = target; } else { el.textContent = cur; requestAnimationFrame(tick); } }
+        requestAnimationFrame(tick); numIO.unobserve(el);
+      });
+    },{threshold:0.8});
+    nums.forEach(n=>numIO.observe(n));
+
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.project-card');
+    function applyFilter(val){
+      cards.forEach(c=>{
+        const show = val==='all' || c.dataset.tags.split(' ').includes(val);
+        c.style.pointerEvents = show ? 'auto' : 'none';
+        c.style.opacity = show ? '1' : '.15';
+        c.style.transform = show ? 'translateY(0)' : 'scale(.98)';
+        c.classList.toggle('d-none', !show);
+      });
+    }
+    pills.forEach(p=>p.addEventListener('click', ()=>{
+      pills.forEach(x=>x.classList.remove('active'));
+      p.classList.add('active');
+      applyFilter(p.dataset.filter);
+    }));
+    applyFilter('all');
 
     AOS.init({ once:true, duration:650, easing:'ease-out-cubic' });
   </script>
