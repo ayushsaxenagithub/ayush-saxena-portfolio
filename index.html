@@ -9,66 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    :root{
-      --ayush-primary:#7c3aed;
-      --ayush-accent:#22d3ee;
-      --ayush-bg:#0b0f1a;
-      --ayush-surface:#0f1629;
-      --ayush-surface-2:#101a31;
-      --ayush-border:rgba(255,255,255,.07);
-      --ayush-text:#dbe2f1;
-      --nav-h:76px;
-    }
-    html{scroll-behavior:smooth}
-    body{background:var(--ayush-bg);color:var(--ayush-text);padding-top:var(--nav-h)}
-    section[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
-    @media (min-width:1200px){html{font-size:18px}}
-    @media (min-width:1600px){html{font-size:19px}}
-    @media (min-width:1440px){.container,.container-xxl{max-width:1500px}}
-    @media (min-width:1800px){.container,.container-xxl{max-width:1580px}}
-
-    .navbar{position:fixed;top:0;left:0;right:0;min-height:var(--nav-h);z-index:1080;backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);background:rgba(11,15,26,.78)!important;border-bottom:1px solid var(--ayush-border)}
-    .navbar-brand{font-weight:800;letter-spacing:.3px}
-    .nav-link{font-weight:600}
-    .nav-link.active{background:linear-gradient(90deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-    .hero{background:
-      radial-gradient(1200px 520px at -10% -10%, rgba(124,58,237,.25), transparent),
-      radial-gradient(900px 520px at 110% 10%, rgba(34,211,238,.22), transparent),
-      linear-gradient(180deg,#0d1428 0%, #0b0f1a 100%)}
-    .hero .container-xxl{padding-top:calc(var(--nav-h) + 1.6rem);padding-bottom:4.5rem}
-    .hero-title{font-size:clamp(2.6rem,5.5vw,4.3rem);font-weight:900;line-height:1.05}
-    .hero-sub{font-size:1.15rem}
-    .profile-photo{width:268px;height:268px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,.08);box-shadow:0 22px 60px rgba(0,0,0,.5)}
-
-    .glass-card{background:var(--ayush-surface);border:1px solid var(--ayush-border);box-shadow:0 24px 60px rgba(0,0,0,.4);border-radius:18px}
-    .section-title{font-weight:900}
-    .rounded-2xl{border-radius:1.25rem}
-    .text-muted{color:rgba(219,226,241,.72)!important}
-    .btn-gradient{background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));border:none;color:#0a0f1a}
-    .btn-gradient:hover{filter:brightness(1.05)}
-    footer{background:linear-gradient(135deg,#0e1836,#0b0f1a);border-top:1px solid var(--ayush-border)}
-
-    .timeline{position:relative;padding-left:1.7rem}
-    .timeline::before{content:"";position:absolute;left:.65rem;top:.25rem;bottom:.25rem;width:2px;background:linear-gradient(180deg,var(--ayush-primary),transparent)}
-    .t-item{position:relative;margin-bottom:1.4rem}
-    .t-dot{position:absolute;left:-.25rem;top:.28rem;width:16px;height:16px;border-radius:50%;background:var(--ayush-primary);box-shadow:0 0 0 4px rgba(124,58,237,.15)}
-
-    @media (max-width:575.98px){
-      .hero .container-xxl{padding-top:calc(var(--nav-h) + .9rem);padding-bottom:3rem}
-      .profile-photo{width:230px;height:230px}
-      .btn{padding:.7rem 1.05rem}
-    }
-
-    .stat{display:flex;align-items:center;gap:.75rem;justify-content:center}
-    .stat .num{font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-    .filter-pill{cursor:pointer}
-    .filter-pill.active{background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));color:#0a0f1a;border-color:transparent}
-    .project-card{transition:transform .2s ease,opacity .2s ease}
-    .project-card:hover{transform:translateY(-4px)}
-  </style>
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body data-bs-spy="scroll" data-bs-target="#topnav" tabindex="0">
   <nav id="topnav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
@@ -101,7 +42,7 @@
           <img src="img/profile.jpg" class="profile-photo" alt="Ayush Saxena profile" />
         </div>
         <div class="col-12 col-lg-6" data-aos="fade-left">
-          <h1 class="hero-title mb-2">Hi, I'm <span style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));-webkit-background-clip:text;background-clip:text;color:transparent">Ayush Saxena</span></h1>
+          <h1 class="hero-title mb-2">Hi, I'm <span class="text-gradient-primary">Ayush Saxena</span></h1>
           <p class="hero-sub mb-3">MLOps Engineer & Software Developer <span class="text-muted">(ReactJS · Django)</span></p>
           <p class="lead mb-4">I build reliable backends, ML pipelines, and cloud infrastructure with observability and guardrails.</p>
           <div class="d-flex flex-wrap gap-2">
@@ -110,10 +51,10 @@
             <a href="https://linkedin.com/in/ayush-saxena-8b8213195" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a>
           </div>
           <div class="row g-3 mt-4">
-            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="2">0</span><span class="text-muted">yrs exp</span></div></div>
-            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="15">0</span><span class="text-muted">techs</span></div></div>
-            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="10">0</span><span class="text-muted">projects</span></div></div>
-            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num" data-target="1">0</span><span class="text-muted">book</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num text-gradient-primary" data-target="2">0</span><span class="text-muted">yrs exp</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num text-gradient-primary" data-target="15">0</span><span class="text-muted">techs</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num text-gradient-primary" data-target="10">0</span><span class="text-muted">projects</span></div></div>
+            <div class="col-6 col-md-3"><div class="glass-card p-3 rounded-2xl stat"><span class="num text-gradient-primary" data-target="1">0</span><span class="text-muted">book</span></div></div>
           </div>
         </div>
       </div>
@@ -127,15 +68,15 @@
           <h2 class="section-title mb-3">About Me</h2>
           <p class="lead">I’m a software developer with a strong foundation in backend systems, cloud infrastructure, and MLOps. I build reliable APIs, secure architectures, and data-driven features. At Turing, I owned ML pipelines and production services; I also built LLM features for supplier discovery, RFQs, and pricing insights.</p>
           <ul class="list-unstyled mt-3 mb-4">
-            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>IIT Kharagpur — Dual Degree in Ocean Engineering & Naval Architecture (’24)</li>
-            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>Neural network for turbulence analysis (MSE 8.777e-07; RMSE 0.00094; R² ≈ 0.9975)</li>
-            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>PilotLMS — Django LMS with role-based dashboards & analytics</li>
-            <li class="mb-0"><i class="fa-solid fa-check me-2" style="color:#bba6ff"></i>Events Head (NAROES) — led 30+ team; executed institute-scale events</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2 icon-check"></i>IIT Kharagpur — Dual Degree in Ocean Engineering & Naval Architecture (’24)</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2 icon-check"></i>Neural network for turbulence analysis (MSE 8.777e-07; RMSE 0.00094; R² ≈ 0.9975)</li>
+            <li class="mb-2"><i class="fa-solid fa-check me-2 icon-check"></i>PilotLMS — Django LMS with role-based dashboards & analytics</li>
+            <li class="mb-0"><i class="fa-solid fa-check me-2 icon-check"></i>Events Head (NAROES) — led 30+ team; executed institute-scale events</li>
           </ul>
         </div>
         <div class="col-lg-5" data-aos="fade-left">
           <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-3"><i class="fa-solid fa-briefcase me-2" style="color:#a78bfa"></i>What I Do</h5>
+            <h5 class="mb-3"><i class="fa-solid fa-briefcase me-2 icon-purple"></i>What I Do</h5>
             <ul class="mb-0">
               <li class="mb-2">Design scalable backends (REST/GraphQL) with Django/DRF & Flask.</li>
               <li class="mb-2">MLOps: data pipelines, training, evaluation, deployment, monitoring.</li>
@@ -155,33 +96,33 @@
         <div class="col-lg-7" data-aos="fade-right">
           <div class="mb-3">
             <strong>Backend Engineering</strong>
-            <div class="progress bg-dark"><div class="progress-bar" data-value="95" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="95" style="width:0%"></div></div>
             <small class="text-muted">Python · Django · DRF · Flask · FastAPI · GraphQL</small>
           </div>
           <div class="mb-3">
             <strong>Cloud & Infra</strong>
-            <div class="progress bg-dark"><div class="progress-bar" data-value="90" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="90" style="width:0%"></div></div>
             <small class="text-muted">AWS · GCP · Terraform · Docker · Kubernetes · Nginx</small>
           </div>
           <div class="mb-3">
             <strong>MLOps & SRE</strong>
-            <div class="progress bg-dark"><div class="progress-bar" data-value="88" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="88" style="width:0%"></div></div>
             <small class="text-muted">Pipelines · CI/CD · Observability · Rollbacks · RBAC</small>
           </div>
           <div class="mb-3">
             <strong>Frontend</strong>
-            <div class="progress bg-dark"><div class="progress-bar" data-value="85" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="85" style="width:0%"></div></div>
             <small class="text-muted">React · TypeScript · Bootstrap · Responsive UI</small>
           </div>
           <div>
             <strong>Data & LLM</strong>
-            <div class="progress bg-dark"><div class="progress-bar" data-value="82" style="background:linear-gradient(135deg,var(--ayush-primary),var(--ayush-accent));width:0%"></div></div>
+            <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="82" style="width:0%"></div></div>
             <small class="text-muted">Pandas · SQL · Retrieval · Evaluation · Agents</small>
           </div>
         </div>
         <div class="col-lg-5" data-aos="fade-left">
           <div class="glass-card p-4 rounded-2xl h-100">
-            <h5 class="mb-3"><i class="fa-solid fa-layer-group me-2" style="color:#a78bfa"></i>Tech I Love</h5>
+            <h5 class="mb-3"><i class="fa-solid fa-layer-group me-2 icon-purple"></i>Tech I Love</h5>
             <div class="d-flex flex-wrap gap-2">
               <span class="badge border text-bg-dark">Python</span>
               <span class="badge border text-bg-dark">Django/DRF</span>
@@ -353,7 +294,7 @@
         <div class="col-md-6" data-aos="fade-up">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">Book — Data Structures & Algorithms (DSA)</h5>
-            <div class="fw-semibold mb-2" style="color:#93c5fd">Published 2025</div>
+            <div class="fw-semibold mb-2 text-highlight">Published 2025</div>
             <p class="mb-2">Interview-ready guide with patterns, annotated solutions, and complexity trade-offs. Backend engineer’s perspective.</p>
             <div>
               <a href="#" class="btn btn-sm btn-primary disabled" aria-disabled="true"><i class="fa-solid fa-book me-2"></i>Preview</a>
@@ -382,14 +323,14 @@
         <div class="col-md-6" data-aos="fade-up">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">Events Head — NAROES</h5>
-            <div class="fw-semibold mb-2" style="color:#93c5fd">Team of 30+ · Samudramanthan Fest</div>
+            <div class="fw-semibold mb-2 text-highlight">Team of 30+ · Samudramanthan Fest</div>
             <p class="mb-0">Planned and executed institute-level events, coordinated sponsors and logistics; improved operations and participation.</p>
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
           <div class="glass-card p-4 rounded-2xl h-100">
             <h5 class="mb-1">General Championship — Product Track</h5>
-            <div class="fw-semibold mb-2" style="color:#93c5fd">Team Lead · 3rd Place</div>
+            <div class="fw-semibold mb-2 text-highlight">Team Lead · 3rd Place</div>
             <p class="mb-0">Led builds of financial and e-commerce products; focused on UX, data flows, and stability under load.</p>
           </div>
         </div>
@@ -417,64 +358,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    const nav = document.getElementById('topnav');
-    function setNavH(){
-      const h = nav ? nav.offsetHeight : 76;
-      document.documentElement.style.setProperty('--nav-h', h + 'px');
-      const spy = bootstrap.ScrollSpy.getInstance(document.body);
-      if (spy) spy.dispose();
-      new bootstrap.ScrollSpy(document.body, { target: '#topnav', offset: h + 1 });
-    }
-    setNavH();
-    window.addEventListener('resize', setNavH);
-    window.addEventListener('load', setNavH);
-    window.addEventListener('orientationchange', setNavH);
-
-    const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll', ()=>{ toTop.style.display = window.scrollY > 400 ? 'inline-flex' : 'none'; });
-    toTop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
-
-    const bars = document.querySelectorAll('#skills .progress-bar');
-    const barIO = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.width = e.target.getAttribute('data-value') + '%'; barIO.unobserve(e.target); }});
-    },{threshold:0.4});
-    bars.forEach(b=>barIO.observe(b));
-
-    const nums = document.querySelectorAll('.num');
-    const numIO = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        const el = entry.target; const target = +el.dataset.target; let cur = 0;
-        const step = Math.max(1, Math.ceil(target/60));
-        function tick(){ cur += step; if(cur >= target){ el.textContent = target; } else { el.textContent = cur; requestAnimationFrame(tick); } }
-        requestAnimationFrame(tick); numIO.unobserve(el);
-      });
-    },{threshold:0.8});
-    nums.forEach(n=>numIO.observe(n));
-
-    const pills = document.querySelectorAll('.filter-pill');
-    const cards = document.querySelectorAll('.project-card');
-    function applyFilter(val){
-      cards.forEach(c=>{
-        const show = val==='all' || c.dataset.tags.split(' ').includes(val);
-        c.style.pointerEvents = show ? 'auto' : 'none';
-        c.style.opacity = show ? '1' : '.15';
-        c.style.transform = show ? 'translateY(0)' : 'scale(.98)';
-        c.classList.toggle('d-none', !show);
-      });
-    }
-    pills.forEach(p=>p.addEventListener('click', ()=>{
-      pills.forEach(x=>x.classList.remove('active'));
-      p.classList.add('active');
-      applyFilter(p.dataset.filter);
-    }));
-    applyFilter('all');
-
-    AOS.init({ once:true, duration:650, easing:'ease-out-cubic' });
-  </script>
+  <script src="script.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5844311375279389"
      crossorigin="anonymous"></script>
 </body>
