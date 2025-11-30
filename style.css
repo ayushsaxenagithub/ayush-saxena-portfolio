@@ -117,23 +117,18 @@ section[id] {
 .profile-photo {
   width: 300px;
   height: 300px;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-radius: 50%;
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 0 30px rgba(124, 58, 237, 0.2),
     inset 0 0 20px rgba(124, 58, 237, 0.2);
-  animation: morph 8s ease-in-out infinite;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .profile-photo:hover {
-  transform: scale(1.05) rotate(2deg);
-}
-
-@keyframes morph {
-  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .glass-card {
@@ -164,6 +159,10 @@ section[id] {
   box-shadow:
     0 20px 40px -10px rgba(0, 0, 0, 0.6),
     0 0 20px rgba(124, 58, 237, 0.1);
+}
+.glass-card:hover .btn-gradient {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
 }
 
 .tilt-card {
