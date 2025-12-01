@@ -94,27 +94,27 @@
       <h2 class="section-title mb-4" data-aos="fade-up">Technical Skills</h2>
       <div class="row g-4">
         <div class="col-lg-7" data-aos="fade-right">
-          <div class="mb-3">
+          <div class="mb-3" data-aos="fade-right" data-aos-delay="100">
             <strong>Backend Engineering</strong>
             <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="95" style="width:0%"></div></div>
             <small class="text-muted">Python · Django · DRF · Flask · FastAPI · GraphQL</small>
           </div>
-          <div class="mb-3">
+          <div class="mb-3" data-aos="fade-right" data-aos-delay="200">
             <strong>Cloud & Infra</strong>
             <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="90" style="width:0%"></div></div>
             <small class="text-muted">AWS · GCP · Terraform · Docker · Kubernetes · Nginx</small>
           </div>
-          <div class="mb-3">
+          <div class="mb-3" data-aos="fade-right" data-aos-delay="300">
             <strong>MLOps & SRE</strong>
             <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="88" style="width:0%"></div></div>
             <small class="text-muted">Pipelines · CI/CD · Observability · Rollbacks · RBAC</small>
           </div>
-          <div class="mb-3">
+          <div class="mb-3" data-aos="fade-right" data-aos-delay="400">
             <strong>Frontend</strong>
             <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="85" style="width:0%"></div></div>
             <small class="text-muted">React · TypeScript · Bootstrap · Responsive UI</small>
           </div>
-          <div>
+          <div data-aos="fade-right" data-aos-delay="500">
             <strong>Data & LLM</strong>
             <div class="progress bg-dark"><div class="progress-bar bg-gradient-primary" data-value="82" style="width:0%"></div></div>
             <small class="text-muted">Pandas · SQL · Retrieval · Evaluation · Agents</small>
@@ -150,8 +150,7 @@
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Dec 2022 — B.Tech Capstone</h6><p class="text-muted mb-0">Built <strong>PilotLMS</strong> with dashboards & analytics.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jul 2023 — M.Tech Project</h6><p class="text-muted mb-0">Turbulence NN — MSE 8.777e-07; RMSE 0.00094; R² 0.9975.</p></div></div>
         <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Apr 2024 — Graduated IIT KGP</h6><p class="text-muted mb-0">Completed Dual Degree.</p></div></div>
-        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jun 2024 — MLOps / Software Engineer @ Turing</h6><p class="text-muted mb-0">Automated ML pipelines and shipped production services.</p></div></div>
-        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Nov 2024 — SwissPlat</h6><p class="text-muted mb-0">Built an LLM solution for supplier discovery, RFQs, and price intelligence.</p></div></div>
+        <div class="t-item"><span class="t-dot"></span><div class="ms-4"><h6 class="mb-1">Jun 2024 — Nov 2024 — MLOps / Software Engineer @ Turing</h6><p class="text-muted mb-0">Automated ML pipelines and shipped production services.</p></div></div>
       </div>
     </div>
   </section>
@@ -237,27 +236,86 @@
           <button class="btn btn-outline-light btn-sm filter-pill" data-filter="llm">LLM</button>
         </div>
       </div>
+      <div class="row g-4 mb-5">
+        <div class="col-12 project-card" data-tags="backend llm mlops" data-aos="fade-up">
+          <div class="glass-card p-5">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3 class="mb-3 text-gradient-primary fw-bold">SwissPlat LLM Platform</h3>
+                <p class="lead text-light mb-4">A high-performance B2B marketplace engine designed to revolutionize supplier discovery and trade execution.</p>
+                <div class="mb-4">
+                  <h6 class="text-white mb-3"><i class="fa-solid fa-list-check me-2 icon-purple"></i>Key Deliverables</h6>
+                  <ul class="text-muted">
+                    <li class="mb-2" data-aos="fade-right" data-aos-delay="100"><strong>Smart Supplier Matching:</strong> Engineered an LLM-powered matching engine that analyzes RFQs against supplier capabilities using vector search (pgvector) for high-relevance connections.</li>
+                    <li class="mb-2" data-aos="fade-right" data-aos-delay="200"><strong>Automated RFQ Management:</strong> Built a multi-tenant architecture where buyers can broadcast requirements and receive AI-standardized quotes, reducing manual negotiation time by 40%.</li>
+                    <li class="mb-2" data-aos="fade-right" data-aos-delay="300"><strong>Price Intelligence:</strong> Implemented data pipelines to scrape and analyze market rates, providing real-time pricing insights and arbitrage opportunities to users.</li>
+                    <li class="mb-0" data-aos="fade-right" data-aos-delay="400"><strong>Enterprise AI Guardrails:</strong> Deployed robust prompt injection defenses and offline evaluation loops to ensure safe, hallucinogen-free model outputs in production.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="p-4 rounded-4" style="background: rgba(0,0,0,0.3); border: 1px solid var(--ayush-border);">
+                  <h6 class="text-white mb-3">Tech Stack</h6>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge border text-bg-dark">Django</span>
+                    <span class="badge border text-bg-dark">PostgreSQL</span>
+                    <span class="badge border text-bg-dark">Celery</span>
+                    <span class="badge border text-bg-dark">Redis</span>
+                    <span class="badge border text-bg-dark">OpenAI API</span>
+                    <span class="badge border text-bg-dark">LangChain</span>
+                    <span class="badge border text-bg-dark">Docker</span>
+                    <span class="badge border text-bg-dark">AWS S3</span>
+                  </div>
+                  <hr class="border-secondary my-4">
+                  <div class="text-center">
+                    <a href="https://swissplat.ch/" target="_blank" rel="noopener" class="btn btn-gradient w-100">Visit Platform <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 project-card" data-tags="backend frontend" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card p-5">
+            <div class="row align-items-center">
+              <div class="col-lg-8 order-lg-2">
+                <h3 class="mb-3 text-gradient-primary fw-bold">Govvens — Crowd-Safe Ticketing</h3>
+                <p class="lead text-light mb-4">India's first AI-driven crowd management and ticketing platform, ensuring zero-queue entry for high-footfall stadiums.</p>
+                <div class="mb-4">
+                  <h6 class="text-white mb-3"><i class="fa-solid fa-shield-halved me-2 icon-purple"></i>Key Innovation</h6>
+                  <ul class="text-muted">
+                    <li class="mb-2" data-aos="fade-left" data-aos-delay="200"><strong>Biometric Entry System:</strong> Integrated eKYC and Facial Recognition for sub-2-second entry verification, eliminating ticket fraud and scalping.</li>
+                    <li class="mb-2" data-aos="fade-left" data-aos-delay="300"><strong>AI Crowd Shaping:</strong> Developed an algorithm that assigns dynamic entry slots based on real-time gate occupancy heatmaps, preventing stampedes and congestion.</li>
+                    <li class="mb-2" data-aos="fade-left" data-aos-delay="400"><strong>Smart Journey Planner:</strong> Integrated Google Maps API to provide users with privacy-first route optimization based on their assigned entry slot and home location.</li>
+                    <li class="mb-0" data-aos="fade-left" data-aos-delay="500"><strong>Live Observability:</strong> Built a command center dashboard for venue operators to monitor crowd density and gate throughput in real-time.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4 order-lg-1">
+                <div class="p-4 rounded-4" style="background: rgba(0,0,0,0.3); border: 1px solid var(--ayush-border);">
+                  <h6 class="text-white mb-3">Tech Stack</h6>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge border text-bg-dark">Django REST</span>
+                    <span class="badge border text-bg-dark">ReactJS</span>
+                    <span class="badge border text-bg-dark">PostgreSQL</span>
+                    <span class="badge border text-bg-dark">Face Recognition SDK</span>
+                    <span class="badge border text-bg-dark">Google Maps API</span>
+                    <span class="badge border text-bg-dark">Razorpay</span>
+                    <span class="badge border text-bg-dark">AWS EC2</span>
+                  </div>
+                  <hr class="border-secondary my-4">
+                  <div class="text-center">
+                    <a href="https://new.govvens.com/" target="_blank" rel="noopener" class="btn btn-gradient w-100">Live Site <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4 project-card" data-tags="backend llm mlops" data-aos="fade-up">
-          <div class="glass-card p-4 h-100">
-            <h5>SwissPlat LLM Platform</h5>
-            <p class="text-muted">Multi-tenant B2B platform for supplier discovery & RFQ automation. Features AI price insights, vector search retrieval, and prompt guardrails.</p>
-            <span class="badge border text-bg-dark">Django</span>
-            <span class="badge border text-bg-dark">PostgreSQL</span>
-            <span class="badge border text-bg-dark">Celery</span>
-            <span class="badge border text-bg-dark">LLM</span>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 project-card" data-tags="backend frontend" data-aos="fade-up" data-aos-delay="25">
-          <div class="glass-card p-4 h-100">
-            <h5>Govvens — Crowd-Safe Ticketing</h5>
-            <p class="text-muted">India's first crowd-safe ticketing platform. Features AI-based slot assignment, eKYC + Face Scan entry, anti-scalping measures, and crowd heatmaps.</p>
-            <span class="badge border text-bg-dark">Django</span>
-            <span class="badge border text-bg-dark">React</span>
-            <span class="badge border text-bg-dark">Google Maps API</span>
-            <span class="badge border text-bg-dark">AWS</span>
-          </div>
-        </div>
         <div class="col-md-6 col-lg-4 project-card" data-tags="mlops backend" data-aos="fade-up" data-aos-delay="50">
           <div class="glass-card p-4 h-100">
             <h5>Driven Turbulence Analysis</h5>

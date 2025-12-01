@@ -160,6 +160,10 @@ section[id] {
     0 20px 40px -10px rgba(0, 0, 0, 0.6),
     0 0 20px rgba(124, 58, 237, 0.1);
 }
+.glass-card:hover .btn-gradient {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
 
 .tilt-card {
   transform-style: preserve-3d;
