@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --ayush-primary: #7c3aed;
-  --ayush-accent: #22d3ee;
+  --ayush-primary: #00FFC9;
+  --ayush-accent: #FF0036;
   --ayush-bg: #050505;
   --ayush-surface: rgba(255, 255, 255, 0.03);
   --ayush-surface-hover: rgba(255, 255, 255, 0.07);
@@ -25,8 +25,8 @@ body {
   font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
   background-image:
-    radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.08), transparent 25%);
+    radial-gradient(circle at 15% 50%, rgba(0, 255, 201, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 0, 54, 0.08), transparent 25%);
 }
 
 ::-webkit-scrollbar {
@@ -77,7 +77,7 @@ section[id] {
 }
 .nav-link:hover, .nav-link.active {
   color: #fff !important;
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+  text-shadow: 0 0 10px rgba(0, 255, 201, 0.5);
 }
 
 .hero {
@@ -92,7 +92,7 @@ section[id] {
   position: absolute;
   top: -50%; left: -50%;
   width: 200%; height: 200%;
-  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at center, rgba(0, 255, 201, 0.03) 0%, transparent 50%);
   animation: rotateBackground 20s linear infinite;
   z-index: -1;
 }
@@ -121,13 +121,13 @@ section[id] {
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 0 30px rgba(124, 58, 237, 0.2),
-    inset 0 0 20px rgba(124, 58, 237, 0.2);
+    0 0 30px rgba(0, 255, 201, 0.2),
+    inset 0 0 20px rgba(0, 255, 201, 0.2);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .profile-photo:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 50px rgba(0, 255, 201, 0.4);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -158,11 +158,11 @@ section[id] {
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow:
     0 20px 40px -10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(124, 58, 237, 0.1);
+    0 0 20px rgba(0, 255, 201, 0.1);
 }
 .glass-card:hover .btn-gradient {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 15px rgba(255, 0, 54, 0.5);
 }
 
 .tilt-card {
@@ -176,11 +176,11 @@ section[id] {
 .btn-gradient {
   background: linear-gradient(135deg, var(--ayush-primary), var(--ayush-accent));
   border: none;
-  color: #fff;
+  color: #000;
   font-weight: 600;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 255, 201, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -200,8 +200,8 @@ section[id] {
 }
 .btn-gradient:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
-  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 255, 201, 0.5);
+  color: #000;
 }
 .btn-outline-light {
   border-radius: 50px;
@@ -232,15 +232,15 @@ section[id] {
 .bg-gradient-primary {
   background: linear-gradient(135deg, var(--ayush-primary), var(--ayush-accent));
 }
-.icon-check { color: #bba6ff; }
-.icon-purple { color: #a78bfa; }
-.text-highlight { color: #93c5fd; }
+.icon-check { color: var(--ayush-primary); }
+.icon-purple { color: var(--ayush-primary); }
+.text-highlight { color: var(--ayush-accent); }
 .text-muted { color: var(--ayush-text-muted) !important; }
 
 .timeline {
   position: relative;
   padding-left: 2rem;
-  border-left: 2px solid rgba(124, 58, 237, 0.2);
+  border-left: 2px solid rgba(0, 255, 201, 0.2);
 }
 .t-item {
   position: relative;
@@ -255,7 +255,7 @@ section[id] {
   border-radius: 50%;
   background: var(--ayush-bg);
   border: 4px solid var(--ayush-primary);
-  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 201, 0.5);
   transition: transform 0.3s ease;
 }
 .t-item:hover .t-dot {
@@ -285,8 +285,8 @@ section[id] {
 }
 .filter-pill.active {
   background: var(--ayush-primary);
-  color: white;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 255, 201, 0.4);
 }
 .badge {
   background: rgba(255, 255, 255, 0.05) !important;
